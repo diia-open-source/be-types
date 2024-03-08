@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.organisms;
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.organisms";
+
+import "designSystem/atoms/dotNavigationAtm.proto";
+import "designSystem/molecules/halvedCardMlc.proto";
+import "designSystem/molecules/iconCardMlc.proto";
+
+/**
+@see
+https://diia.atlassian.net/wiki/spaces/DIIA/pages/1358889026/halvedCardCarouselOrg
+ */
+message HalvedCardCarouselOrg {
+  ua.gov.diia.types.ds.atoms.DotNavigationAtm dotNavigationAtm = 1;
+  repeated HalvedCardCarouselItem items = 2;
+}
+
+message HalvedCardCarouselItem {
+  optional ua.gov.diia.types.ds.molecules.HalvedCardMlc halvedCardMlc = 1;
+  optional ua.gov.diia.types.ds.molecules.IconCardMlc iconCardMlc = 2;
+}

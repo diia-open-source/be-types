@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.organisms;
+
+import "designSystem/molecules/checkboxRoundMlc.proto";
+import "designSystem/molecules/checkIconMlc.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.organisms";
+
+/**
+ * @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1352171640/checkboxRoundGroupOrg
+ */
+message CheckboxRoundGroupOrg {
+  optional string id = 1;
+  optional string title = 2;
+  optional bool blocker = 5;
+  optional string condition = 3;
+  repeated CheckboxRoundGroupOrgItem items = 4;
+}
+
+message CheckboxRoundGroupOrgItem {
+  reserved 1;
+  reserved "id";
+
+  optional ua.gov.diia.types.ds.molecules.CheckboxRoundMlc checkboxRoundMlc = 2;
+  optional ua.gov.diia.types.ds.molecules.CheckIconMlc checkIconMlc = 3;
+}

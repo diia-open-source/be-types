@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.atoms;
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.atoms";
+
+enum ContentType {
+  link = 0;
+  phone = 1;
+  email = 2;
+  timerTime = 3;
+}

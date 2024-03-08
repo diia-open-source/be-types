@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.molecules;
+
+import "designSystem/icon.proto";
+import "designSystem/atoms/buttonAction.proto";
+import "designSystem/atoms/enums/buttonStateAtmType.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.molecules";
+
+/**
+ * @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1363836929/listItemMlc
+ */
+message ListItemMlc {
+  optional string id = 1;
+  string label = 2;
+  optional string description = 3;
+  optional string logoLeft = 4;
+  optional ListItemMlcIcon iconLeft = 5;
+  optional ListItemMlcIcon iconRight = 6;
+  optional ua.gov.diia.types.ds.atoms.button.ButtonAction action = 7;
+  optional ua.gov.diia.types.ds.atoms.button.ButtonState state = 8;
+}
+
+message ListItemMlcIcon { ua.gov.diia.types.ds.icon.Icon code = 1; }

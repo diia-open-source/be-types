@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.molecules;
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.molecules";
+
+import "designSystem/atoms/badgeCounterAtm.proto";
+
+/**
+@see
+https://diia.atlassian.net/wiki/spaces/DIIA/pages/1371439310/verticalCardMlc
+ */
+message VerticalCardMlc {
+  string image = 1;
+  ua.gov.diia.types.ds.atoms.BadgeCounterAtm badgeCounterAtm = 2;
+  string title = 3;
+  optional string id = 4;
+  optional VerticalCardAction action = 5;
+}
+
+message VerticalCardAction {
+  string type = 1;
+  optional string subtype = 2;
+  optional string resource = 3;
+}

@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.organisms;
+
+import "designSystem/atoms/btnPrimaryDefaultAtm.proto";
+import "designSystem/atoms/btnPlainAtm.proto";
+import "designSystem/organisms/checkboxBtnOrg.proto";
+import "designSystem/molecules/btnIconPlainGroupMlc.proto";
+import "designSystem/atoms/btnPrimaryLargeAtm.proto";
+import "designSystem/atoms/btnStrokeDefaultAtm.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.organisms";
+
+/**
+ * @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1363018084/bottomGroupOrg
+ */
+message BottomGroupOrg {
+    optional ua.gov.diia.types.ds.atoms.BtnPrimaryDefaultAtm btnPrimaryDefaultAtm = 1;
+    optional ua.gov.diia.types.ds.atoms.BtnPlainAtm btnPlainAtm = 2;
+    optional ua.gov.diia.types.ds.organisms.CheckboxBtnOrg checkboxBtnOrg = 3;
+    optional string componentId = 4;
+    optional ua.gov.diia.types.ds.molecules.BtnIconPlainGroupMlc btnIconPlainGroupMlc  = 5;
+    optional ua.gov.diia.types.ds.atoms.BtnPrimaryLargeAtm btnPrimaryLargeAtm = 6;
+    optional ua.gov.diia.types.ds.atoms.BtnStrokeDefaultAtm btnStrokeDefaultAtm = 7;
+}

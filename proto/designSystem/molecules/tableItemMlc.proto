@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.molecules;
+
+import "designSystem/molecules/smallEmojiPanelMlc.proto";
+import "designSystem/molecules/smallEmojiPanelPlaneMlc.proto";
+import "designSystem/molecules/tableItemHorizontalMlc.proto";
+import "designSystem/molecules/tableItemPrimaryMlc.proto";
+import "designSystem/molecules/tableItemVerticalMlc.proto";
+import "designSystem/molecules/docTableItemHorizontalMlc.proto";
+import "designSystem/molecules/docTableItemHorizontalLongerMlc.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.molecules";
+
+message TableItemMlc {
+    optional ua.gov.diia.types.ds.molecules.SmallEmojiPanelMlc smallEmojiPanelMlc = 1;
+    optional ua.gov.diia.types.ds.molecules.TableItemPrimaryMlc tableItemPrimaryMlc = 2;
+    optional ua.gov.diia.types.ds.molecules.TableItemHorizontalMlc tableItemHorizontalMlc = 3;
+    optional ua.gov.diia.types.ds.molecules.TableItemVerticalMlc tableItemVerticalMlc = 4;
+    optional ua.gov.diia.types.ds.molecules.SmallEmojiPanelPlaneMlc smallEmojiPanelPlaneMlc = 5;
+    optional ua.gov.diia.types.ds.molecules.DocTableItemHorizontalMlc docTableItemHorizontalMlc = 6;
+    optional ua.gov.diia.types.ds.molecules.DocTableItemHorizontalLongerMlc docTableItemHorizontalLongerMlc = 7;
+}

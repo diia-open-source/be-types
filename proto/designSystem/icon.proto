@@ -1,0 +1,120 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.icon;
+
+option java_multiple_files = true;
+option java_package = "xua.gov.diia.types.ds.icon";
+
+enum Icon {
+    // Ellipse
+    ellipseArmy = 0;
+    ellipseArrowRight = 1;
+    ellipseArrowLeft = 100;
+    ellipseAttention = 2;
+    ellipseBag = 3;
+    ellipseCar = 4;
+    ellipseChatCheck = 5;
+    ellipseCheck = 6;
+    ellipseClipBoard = 7;
+    ellipseCourt = 8;
+    ellipseCovid = 9;
+    ellipseCross = 10;
+    ellipseGames = 11;
+    ellipseHandCoins = 12;
+    ellipseHandHome = 13;
+    ellipseHome = 14;
+    ellipseKebab = 15;
+    ellipseKebabWhite = 96;
+    ellipseLed = 16;
+    ellipseMarriage = 17;
+    ellipsePackage = 18;
+    ellipsePersonChat = 19;
+    ellipsePersonSearch = 20;
+    ellipseRepair = 21;
+    ellipseSticker = 22;
+    ellipseTrident = 23;
+    ellipseWhiteArrowRight = 24;
+    pn = 25;
+    safety = 26;
+    shelter = 27;
+    doubleIcon = 97;
+    safetyLarge = 99;
+
+    // Stroke
+    add = 28;
+    aidKit = 29;
+    bag = 30;
+    barcode = 31;
+    calendar = 32;
+    cancel = 33;
+    close = 83;
+    copy = 34;
+    delete = 35;
+    delivery = 36;
+    device= 37;
+    docInfo = 38;
+    download = 39;
+    drag = 40;
+    edit = 41;
+    ellipseMenu = 84;
+    eng = 42;
+    faq = 43;
+    history = 44;
+    holdCash = 45;
+    home= 46;
+    homeDoc = 47;
+    key = 48;
+    message = 49;
+    newMessage = 50;
+    police = 51;
+    qr = 52;
+    rating = 53;
+    refresh = 54;
+    reorder = 55;
+    search = 56;
+    settings = 57;
+    share= 58;
+    stack = 59;
+    target= 60;
+    targetWhite = 85;
+    trident = 61;
+    tridentWhite = 86;
+    ua = 62;
+    wallet = 63;
+    placeholder = 87;
+    back = 88;
+    backWhite = 89;
+    kebabMenu = 90;
+    outLink = 91;
+    notification = 92;
+    notificationNew = 93;
+    qrScan = 94;
+    qrScanWhite = 95;
+    hide = 101;
+
+    // Nav
+    docActive = 64;
+    docInActive = 65;
+    feedActive = 66;
+    feedInActive = 67;
+    profileActive = 68;
+    profileInActive = 69;
+    profileNotifActive = 70;
+    profileNotifInActive = 71;
+    serviceActive = 72;
+    serviceInActive = 73;
+
+    // Player
+    pause = 74;
+    play = 75;
+    retry = 76;
+
+    // Facilities
+    charging = 77;
+    generator = 78;
+    cellularConnection = 79;
+    heating = 80;
+    water = 81;
+    internetAccess = 82;
+    medicine = 98;
+}

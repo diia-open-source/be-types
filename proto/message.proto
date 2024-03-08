@@ -1,0 +1,97 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.messages;
+
+import "ui.proto";
+import "designSystem/atoms/articlePicAtm.proto";
+import "designSystem/atoms/textParameterAtm.proto";
+
+import "designSystem/molecules/articleVideoMlc.proto";
+import "designSystem/molecules/textLabelContainerMlc.proto";
+
+import "designSystem/organisms/listItemGroupOrg.proto";
+import "designSystem/organisms/bottomGroupOrg.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types";
+
+enum MessageBodyItemType {
+  text = 0;
+  image = 1;
+  video = 2;
+  internalArrowedLink = 3;
+  externalArrowedLink = 4;
+  downloadArrowedLink = 5;
+  separator = 6;
+}
+
+enum ArrowedLinkAction {
+  downloadLink = 0;
+  externalLink = 1;
+  internalLink = 2;
+  logout = 3;
+  addDocument = 4;
+}
+
+enum ListItemState {
+  enabled = 0;
+  disabled = 1;
+  invisible = 2;
+}
+
+enum MessageActionSubtype {
+  pollVideo = 0;
+  pollImages = 1;
+  pollText = 2;
+  status = 3;
+  cancelStatus = 4;
+  application = 5;
+  courtHearing = 6;
+  courtDecision = 7;
+  courtPenalties = 8;
+  onboarding = 9;
+  authorization = 10;
+  signing = 11;
+  notExist = 12;
+  map = 13;
+  download = 14;
+  delete = 15;
+  update = 16;
+  route = 17;
+  share = 18;
+  downloadList = 19;
+  pollQuestionnaire = 20;
+}
+
+message MessageBodyItemData {
+  string text = 1;
+  repeated ua.gov.diia.types.ds.atoms.TextParameterAtm parameters = 2;
+  optional string link = 3;
+  optional ArrowedLinkAction action = 4;
+  optional string image = 5;
+}
+
+message MessageBodyItem {
+  MessageBodyItemType type = 1;
+  optional MessageBodyItemData data = 2;
+}
+
+/** @deprecated textLabelContainerMlc used instead */
+message TextContainer {
+  optional string text = 1;
+  repeated ua.gov.diia.types.ds.atoms.TextParameterAtm parameters = 2;
+  optional string label = 3;
+}
+
+message MessageBodyItemV2 {
+  optional ua.gov.diia.types.ds.molecules.TextLabelContainerMlc
+      textLabelContainerMlc = 1;
+  optional ua.gov.diia.types.ds.atoms.ArticlePicAtm articlePicAtm = 2;
+  optional ua.gov.diia.types.ds.molecules.ArticleVideoMlc articleVideoMlc = 3;
+  optional ua.gov.diia.types.ds.organisms.ListItemGroupOrg listItemGroupOrg = 4;
+}
+
+message MessageBottomGroupItem {
+  optional ua.gov.diia.types.ds.organisms.ListItemGroupOrg listItemGroupOrg = 1;
+  optional ua.gov.diia.types.ds.organisms.BottomGroupOrg bottomGroupOrg = 2;
+}

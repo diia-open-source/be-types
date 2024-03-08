@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.documents;
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.documents";
+
+enum DocumentTypeCamelCase {
+  idCard = 0;
+  foreignPassport = 1;
+  taxpayerCard = 2;
+  driverLicense = 3;
+  vehicleLicense = 4;
+  studentCard = 5;
+  referenceInternallyDisplacedPerson = 6;
+  birthCertificate = 7;
+  localVaccinationCertificate = 8;
+  childLocalVaccinationCertificate = 9;
+  internationalVaccinationCertificate = 10;
+  pensionCard = 11;
+  residencePermitPermanent = 12;
+  residencePermitTemporary = 13;
+  eResidency = 14;
+  eResidentPassport = 15;
+  uId = 16;
+  militaryBond = 17;
+  officialCertificate = 18;
+  housingCertificate = 19;
+  educationDocument = 20;
+  marriageActRecord = 21;
+  divorceActRecord = 22;
+  nameChangeActRecord = 23;
+  userBirthCertificate = 24;
+}

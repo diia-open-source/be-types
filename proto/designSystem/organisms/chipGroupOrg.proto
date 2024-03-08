@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.organisms;
+
+import "designSystem/molecules/chipMlc.proto";
+import "designSystem/molecules/chipTimeMlc.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.organisms";
+
+/**
+@see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1426653237/chipGroupOrg
+ */
+message ChipGroupOrg {
+  optional string componentId = 1;
+  optional string label = 2;
+  repeated ChipGroupOrgItem items = 3;
+  optional string preselectedCode = 4;
+}
+
+message ChipGroupOrgItem {
+    optional ua.gov.diia.types.ds.molecules.ChipMlc chipMlc = 1;
+    optional ua.gov.diia.types.ds.molecules.ChipTimeMlc chipTimeMlc = 2;
+}

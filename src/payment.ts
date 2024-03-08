@@ -1,0 +1,17 @@
+export enum PaymentTarget {
+    AdministrativeFee = 'administrative-fee',
+    Debt = 'debt',
+    Penalty = 'penalty',
+    ReplacementDriverLicense = 'replacement-driver-license',
+    SingleSocialContribution = 'single-social-contribution',
+    SingleTax = 'single-tax',
+    SingleTaxSpecial = 'single-tax-special',
+    SingleSocialContributionPenalty = 'single-social-contribution-penalty',
+    SingleTaxPenalty = 'single-tax-penalty',
+    ResidenceRegistration = 'residence-registration',
+    MilitaryDonation = 'military-donation',
+    VehicleCustomsClearance = 'vehicle-customs-clearance',
+    MilitaryBonds = 'military-bonds',
+    CourtPenalties = 'court-penalties',
+    VehicleReRegistration = 'vehicle-re-registration',
+}

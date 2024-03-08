@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.token;
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.token";
+
+enum Gender {
+  male = 0;
+  female = 1;
+}

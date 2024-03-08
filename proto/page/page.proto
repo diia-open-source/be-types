@@ -1,0 +1,77 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.page;
+
+import "ui.proto";
+import "contextMenu.proto";
+import "page/bodyparam/bodyparam.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.page";
+
+enum PageListType {
+    singleChoice = 0;
+    link = 1;
+}
+
+enum PageBodyParameterName {
+    banks = 0;
+}
+
+enum PageButtonAction {
+    bankAccountSelection = 0;
+    vaccinationCertificate = 1;
+    sendApplication = 2;
+    bankAccounts = 3;
+    assistanceTypes = 4;
+    contacts = 5;
+}
+
+message PageListItem {
+    string id = 1;
+    string title = 2;
+    optional string description = 3;
+    optional string icon = 4;
+    optional string image = 5;
+    optional string link = 6;
+}
+
+message PageBodyParameter {
+    ua.gov.diia.types.page.bodyparam.PageBodyParameterType type = 1;
+    PageBodyParameterData data = 2;
+}
+
+message PageBodyParameterData {
+    PageBodyParameterName name = 1;
+    string alt = 2;
+    optional string resource = 3;
+}
+
+message PageList {
+    PageListType type = 1;
+    optional string description = 2;
+    optional bool searchable = 3;
+    repeated PageListItem items = 4;
+    optional string altChoiceName = 5;
+}
+
+message PageBody {
+    string text = 1;
+    repeated PageBodyParameter parameters = 2;
+}
+
+message PageButton {
+    PageButtonAction action = 1;
+    string name = 2;
+    optional bool isActive = 3;
+}
+
+message Page {
+    string title = 1;
+    repeated ua.gov.diia.types.contextmenu.PublicServiceContextMenu contextMenu = 2;
+    AttentionMessage attentionMessage = 3;
+    AttentionMessage statusMessage = 4;
+    PageBody body = 5;
+    PageList list = 6;
+    PageButton button = 7;
+}

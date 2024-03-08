@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.portal.poll;
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.publicservice.portal";
+
+enum PortalUserPollPermissions {
+  user = 0;
+  masterAdministrator = 1;
+}

@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.organisms;
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.organisms";
+
+import "designSystem/atoms/btnPlainIconAtm.proto";
+
+/**
+ * @see 
+ * https://diia.atlassian.net/wiki/spaces/DIIA/pages/1422590044/mediaUploadGroupOrg
+ */
+message MediaUploadGroupOrg {
+  optional string title = 1;
+  optional string description = 2;
+  optional int32 maxCount = 3;
+  ua.gov.diia.types.ds.atoms.BtnPlainIconAtm btnPlainIconAtm = 4;
+}

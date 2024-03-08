@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.organisms;
+
+import "designSystem/atoms/textParameterAtm.proto";
+import "designSystem/molecules/btnIconPlainGroupMlc.proto";
+import "designSystem/molecules/stubMessageMlc.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.organisms";
+
+/**
+ * @see
+ * https://diia.atlassian.net/wiki/spaces/DIIA/pages/1363542017/qrSharingOrg
+ */
+message QrSharingOrg {
+  optional string componentId = 1;
+  optional ExpireLabel expireLabel = 2;
+  string qrLink = 3;
+  optional ua.gov.diia.types.ds.molecules.BtnIconPlainGroupMlc btnIconPlainGroupMlc = 4;
+  optional ua.gov.diia.types.ds.molecules.StubMessageMlc stubMessageMlc = 5;
+}
+
+message ExpireLabel {
+  string text = 1;
+  repeated ua.gov.diia.types.ds.atoms.TextParameterAtm parameters = 2;
+}

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.molecules;
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.molecules";
+
+/**
+@see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1363836974/headingWithSubtitlesMlc
+ */
+message HeadingWithSubtitlesMlc {
+    string value = 1;
+    repeated string subtitles = 2;
+    optional string componentId = 3;
+}

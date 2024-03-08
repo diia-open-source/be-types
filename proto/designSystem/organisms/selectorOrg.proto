@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.organisms;
+
+import "designSystem/atoms/validationAtm.proto";
+import "designSystem/organisms/selectorListWidgetOrg.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.organisms";
+
+/**
+@see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1363771438/selectorOrg
+ */
+message SelectorOrg {
+  optional string id = 1;
+  optional bool blocker = 2;
+  string label = 3;
+  string placeholder = 4;
+  optional string hint = 5;
+  optional string value = 6;
+  ua.gov.diia.types.ds.organisms.SelectorListWidgetOrg selectorListWidgetOrg = 7;
+  repeated ua.gov.diia.types.ds.atoms.ValidationAtm validation = 8;
+}
+

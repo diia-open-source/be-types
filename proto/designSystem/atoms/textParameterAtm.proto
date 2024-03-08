@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.atoms;
+
+import "designSystem/atoms/enums/contentTypeAtm.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.atoms";
+
+message TextParameterAtm {
+  ua.gov.diia.types.ds.atoms.ContentType type = 1;
+  TextParameterAtmData data = 2;
+}
+
+message TextParameterAtmData {
+  string name = 1;
+  optional string alt = 2;
+  optional string resource = 3;
+  optional int32 timeTimer = 4;
+}

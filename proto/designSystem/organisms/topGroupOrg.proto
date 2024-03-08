@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.organisms;
+
+import "designSystem/molecules/navigationPanelMlc.proto";
+import "designSystem/molecules/titleGroupMlc.proto";
+import "designSystem/organisms/chipTabsOrg.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.organisms";
+
+/**
+@see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1362362442/topGroupOrg
+ */
+message TopGroupOrg {
+  optional ua.gov.diia.types.ds.molecules.NavigationPanelMlc
+      navigationPanelMlc = 1;
+  optional ua.gov.diia.types.ds.organisms.ChipTabsOrg chipTabsOrg = 2;
+  optional ua.gov.diia.types.ds.molecules.TitleGroupMlc titleGroupMlc = 3;
+  optional string componentId = 4;
+}

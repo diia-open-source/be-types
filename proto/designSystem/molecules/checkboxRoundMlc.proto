@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.molecules;
+
+import "designSystem/atoms/enums/checkableAtmType.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.molecules";
+
+/**
+ * @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1368293379/checkboxRoundMlc
+ * @partof designSystem/organisms/checkboxRoundGroupOrg.proto
+ */
+message CheckboxRoundMlc {
+  optional string id = 5;
+  string label = 1;
+  optional string description = 2;
+  optional string status = 3;
+  optional ua.gov.diia.types.ds.atoms.checkable.CheckableAtmType state = 4;
+}

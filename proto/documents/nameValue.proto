@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.documents;
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.documents";
+
+message NameValue {
+  string name = 1;
+  string value = 2;
+}

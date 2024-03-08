@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.molecules;
+
+import "designSystem/atoms/enums/checkableAtmType.proto";
+import "designSystem/atoms/enums/actionCode.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.molecules";
+
+/**
+@see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1368555521/checkIconMlc
+@partof designSystem/organisms/checkboxRoundGroupOrg.proto
+ */
+message CheckIconMlc {
+  ua.gov.diia.types.ds.atoms.ActionCode icon = 1;
+  string label = 2;
+  optional ua.gov.diia.types.ds.atoms.checkable.CheckableAtmType state = 6;
+}

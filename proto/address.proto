@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.address;
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types";
+
+enum AddressCategory {
+    // Level 1
+    specialCityStatus = 0;
+    region = 1;
+
+    // Level 2
+    regionCity = 2;
+    regionDistrict = 3;
+
+    // Level 3
+    districtCity = 4;
+    district = 5;
+    urbanVillage = 6;
+    village = 7;
+    settlement = 8;
+    villageCouncil = 9;
+    unknown = 10;
+    settlementCouncil = 11;
+    community = 12;
+
+    // Level 4
+    garageCooperative = 13;
+    gardensSociety = 14;
+
+    // Level 5
+    street = 15;
+    area = 16;
+    boulevard = 17;
+    avenue = 18;
+    alley = 19;
+
+    // Level 4-5
+    other = 20;
+}

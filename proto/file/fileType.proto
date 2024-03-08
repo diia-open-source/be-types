@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.file;
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.file";
+
+enum FileType {
+  JPEG = 0;
+  PNG = 1;
+  PDF = 2;
+  JSON = 3;
+}
+
+enum ContentDisposition {
+  inline = 0;
+  attachment = 1;
+}

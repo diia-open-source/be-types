@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.token;
+
+import "token/gender.proto";
+import "documents/authDocument.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.token";
+
+message AuthEntryPoint {
+  string target = 1;
+  bool isBankId = 2;
+  optional string bankName = 3;
+  optional string document = 4;
+}
+
+message RefreshToken {
+  string value = 1;
+  int64 expirationTime = 2;
+}
+
+message UserTokenDataMsg {
+  string mobileUid = 1;
+  string identifier = 2;
+  AuthEntryPoint authEntryPoint = 3;
+  RefreshToken refreshToken = 4;
+  string fName = 6;
+  string lName = 7;
+  string mName = 8;
+  string itn = 9;
+  Gender gender = 10;
+  string phoneNumber = 11;
+  string email = 12;
+  string passport = 13;
+  ua.gov.diia.types.documents.AuthDocument document = 14;
+  string birthDay = 15;
+  string addressOfRegistration = 16;
+  string addressOfBirth = 17;
+  optional string bankUserId = 18;
+  optional string edrpou = 19;
+}

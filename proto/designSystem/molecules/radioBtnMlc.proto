@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.molecules;
+
+import "designSystem/atoms/enums/checkableAtmType.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.molecules";
+
+/**
+ * @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1363771393/radioBtnMlc
+ * @partof designSystem/organisms/radioBtnGroupOrg.proto"
+ */
+message RadioBtnMlc {
+  optional string id = 1;
+  optional string logoLeft = 2;
+  optional string logoRight = 3;
+  string label = 4;
+  optional string description = 5;
+  optional string status = 6;
+  optional ua.gov.diia.types.ds.atoms.checkable.CheckableAtmType state = 7;
+  optional string componentId = 8;
+  map<string, string> data = 9;
+}

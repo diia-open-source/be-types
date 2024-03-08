@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package ua.gov.diia.types;
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types";
+
+message HashedFile {
+  string fileName = 1;
+  string fileHash = 2;
+}
+
+message SignedItem {
+  string name = 1;
+  string signature = 2;
+}
+
+message HashedFileWithSignature {
+  string name = 1;
+  string hash = 2;
+  string signature = 3;
+}

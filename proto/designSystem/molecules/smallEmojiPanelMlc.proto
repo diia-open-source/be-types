@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.molecules;
+
+import "designSystem/atoms/iconAtm.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.molecules";
+
+/**
+@see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1362821121/smallEmojiPanelMlc
+ */
+message SmallEmojiPanelMlc {
+    string label = 1;
+    ua.gov.diia.types.ds.atoms.IconAtm icon = 2;
+}

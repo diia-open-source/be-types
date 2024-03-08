@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.organisms;
+
+import "designSystem/atoms/dotNavigationAtm.proto";
+import "designSystem/molecules/smallNotificationMlc.proto";
+import "designSystem/molecules/iconCardMlc.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.organisms";
+
+/**
+@see
+https://diia.atlassian.net/wiki/spaces/DIIA/pages/1358921814/smallNotificationCarouselOrg
+ */
+message SmallNotificationCarouselOrg {
+  ua.gov.diia.types.ds.atoms.DotNavigationAtm dotNavigationAtm = 1;
+  repeated SmallNotificationCarouselOrgItem items = 2;
+}
+
+message SmallNotificationCarouselOrgItem {
+  optional ua.gov.diia.types.ds.molecules.SmallNotificationMlc
+      smallNotificationMlc = 1;
+  optional ua.gov.diia.types.ds.molecules.IconCardMlc iconCardMlc = 3;
+}

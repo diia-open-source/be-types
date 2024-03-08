@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.molecules;
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.molecules";
+
+/**
+@see
+https://diia.atlassian.net/wiki/spaces/DIIA/pages/1370619993/smallNotificationMlc
+ */
+message SmallNotificationMlc {
+  string label = 1;
+  string text = 2;
+  string id = 3;
+  optional SmallNoitificationAction action = 4;
+}
+
+message SmallNoitificationAction {
+  string type = 1;
+  optional string subtype = 2;
+  optional string resource = 3;
+}

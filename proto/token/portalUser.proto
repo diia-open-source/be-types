@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.token;
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.token";
+
+message PortalUser {
+  string fName = 1;
+  string lName = 2;
+  string mName = 3;
+  string itn = 4;
+  string birthDay = 5;
+}
+

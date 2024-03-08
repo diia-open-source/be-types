@@ -1,0 +1,15 @@
+export enum DocStatus {
+    Ok = 200,
+    NoContent = 204,
+    NotFound = 404,
+    NoPhoto = 1010,
+    OldModel = 1011,
+    AdditionalVerification = 1012,
+    AdditionalValidation = 1013,
+    Confirming = 1014,
+    NotConfirmed = 1015,
+    Inactive = 1016,
+    NoRequiredData = 1017,
+    Updating = 1018,
+    Deleting = 1019,
+}

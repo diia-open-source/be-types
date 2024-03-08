@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.molecules;
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.molecules";
+
+/**
+@see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1371537506/halvedCardMlc
+ */
+message HalvedCardMlc {
+    string image = 1;
+    string title = 2;
+    string label = 3;
+    optional string id = 4;
+    optional HalvedCardAction action = 5;
+}
+
+message HalvedCardAction {
+    string type = 1;
+    optional string subtype = 2;
+    optional string resource = 3;
+}

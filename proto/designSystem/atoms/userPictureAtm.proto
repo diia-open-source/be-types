@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.atoms;
+
+import "designSystem/atoms/buttonAction.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.atoms";
+
+/**
+@see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1423179851/userCardMlc
+ */
+
+enum DefaultImage {
+  userFemale = 0;
+  userMale = 1;
+}
+
+message UserPictureAtm {
+  bool useDocPhoto = 1;
+  DefaultImage defaultImageCode = 2;
+  optional ua.gov.diia.types.ds.atoms.button.ButtonAction action = 3;
+}

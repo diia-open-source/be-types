@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.molecules;
+
+import "designSystem/atoms/textParameterAtm.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.molecules";
+
+/**
+@see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1343979542/textLabelMlc
+ */
+message TextLabelMlc {
+  optional string label = 1;
+  optional string text = 2;
+  repeated ua.gov.diia.types.ds.atoms.TextParameterAtm parameters = 3;
+  optional string componentId = 4;
+}

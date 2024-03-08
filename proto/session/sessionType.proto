@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.session;
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.session";
+
+enum SessionType {
+  Acquirer = 0;
+  None = 1;
+  Partner = 2;
+  Temporary = 3;
+  User = 4;
+  EResident = 5;
+  EResidentApplicant = 6;
+  ServiceEntrance = 7;
+  PortalUser = 8;
+  ServiceUser = 9;
+  CabinetUser = 10;
+}

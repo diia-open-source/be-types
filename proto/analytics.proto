@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.analytics;
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types";
+
+message RatingForm {
+    message Rating {
+        string label = 1;
+        repeated RatingItem items = 2;
+    }
+    message Comment {
+        string label = 1;
+        string hint = 2;
+    }
+    optional string formCode = 1;
+    optional string resourceId = 2;
+    string title = 3;
+    Rating rating = 4;
+    Comment comment = 5;
+    string mainButton = 6;
+}
+
+message RatingItem {
+    message Chip {
+        message RatingChipMeta {
+            string code = 1;
+            string name = 2;
+        }
+        string label = 1;
+        string description = 2;
+        repeated RatingChipMeta chips = 3;
+    }
+    string rate = 1;
+    string emoji = 2;
+    optional Chip chip = 4;
+}

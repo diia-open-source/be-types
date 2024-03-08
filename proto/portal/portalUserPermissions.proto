@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.portal;
+
+import "portal/poll/portalPollUserPermissions.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.publicservice.portal";
+
+enum PortalUserPetitionPermissions {
+  user = 0;
+  moderator = 1;
+  proModerator = 2;
+  administrator = 3;
+}
+
+message PortalUserPermissions {
+  optional PortalUserPetitionPermissions petition = 1;
+  optional ua.gov.diia.types.portal.poll.PortalUserPollPermissions poll = 2;
+}

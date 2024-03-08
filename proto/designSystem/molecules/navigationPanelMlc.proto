@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.molecules;
+
+import "contextMenu.proto";
+import "designSystem/atoms/iconAtm.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.molecules";
+
+/**
+@see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1315340291/navigationPanelMlc
+ */
+message NavigationPanelMlc {
+  optional string label = 1;
+  repeated ua.gov.diia.types.contextmenu.PublicServiceContextMenu ellipseMenu = 2;
+  optional string componentId = 3;
+  optional ua.gov.diia.types.ds.atoms.IconAtm iconAtm = 4;
+}

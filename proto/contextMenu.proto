@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.contextmenu;
+import "version.proto";
+import "publicServiceCode.proto";
+import "profileFeature.proto";
+import "session/sessionType.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types";
+
+
+enum PublicServiceContextMenuType {
+  faqCategory = 0;
+  tips = 1;
+  supportServiceScreen = 2;
+  assistantScreen = 3;
+  communityContacts = 4;
+  pollArchive = 5;
+  fundDetails = 6;
+  createContent = 7;
+  rating = 8;
+  downloadList = 9;
+  restoreRecords = 10;
+}
+
+message PublicServiceContextMenu {
+  PublicServiceContextMenuType type = 1;
+  string name = 2;
+  optional string code = 3;
+  optional ua.gov.diia.types.appversion.AppVersions appVersions = 4;
+}
+
+message PublicServiceSettings {
+  string id = 1;
+  repeated string categories =2;
+  PublicServiceCode code = 3;
+  string name = 4;
+  PublicServiceStatus status = 5;
+  repeated string segments = 6;
+  repeated PublicServiceContextMenu contextMenu = 7;
+  optional ua.gov.diia.types.appversion.PublicServiceAppVersionsBySession appVersions = 8;
+  optional ua.gov.diia.types.appversion.SingleVersionRecord platformMinVersion = 9;
+  repeated ua.gov.diia.types.session.SessionType sessionTypes = 10;
+  int32 sortOrder = 11;
+  map<string, string> locales = 12;
+  optional ua.gov.diia.types.profilefeatures.ProfileFeature profileFeature = 13;
+}
+
+message NavigationPanel {
+  optional string header = 1;
+  repeated PublicServiceContextMenu contextMenu = 2;
+}

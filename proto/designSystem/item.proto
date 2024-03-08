@@ -1,0 +1,74 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.item;
+
+import "designSystem/atoms/sectionTitleAtm.proto";
+import "designSystem/molecules/attentionMessageMlc.proto";
+import "designSystem/molecules/textLabelContainerMlc.proto";
+import "designSystem/molecules/textLabelMlc.proto";
+import "designSystem/molecules/titleLabelMlc.proto";
+import "designSystem/molecules/blackCardMlc.proto";
+import "designSystem/molecules/whiteCardMlc.proto";
+import "designSystem/molecules/imageCardMlc.proto";
+import "designSystem/molecules/stubMessageMlc.proto";
+import "designSystem/molecules/userCardMlc.proto";
+import "designSystem/molecules/subtitleLabelMlc.proto";
+import "designSystem/organisms/halvedCardCarouselOrg.proto";
+import "designSystem/organisms/smallNotificationCarouselOrg.proto";
+import "designSystem/organisms/mediaTitleOrg.proto";
+import "designSystem/organisms/articlePicCarouselOrg.proto";
+import "designSystem/organisms/listItemGroupOrg.proto";
+import "designSystem/organisms/verticalCardCarouselOrg.proto";
+import "designSystem/organisms/btnIconRoundedGroupOrg.proto";
+import "designSystem/organisms/qrSharingOrg.proto";
+import "designSystem/organisms/topGroupOrg.proto";
+import "designSystem/organisms/bottomGroupOrg.proto";
+import "designSystem/organisms/calendarOrg.proto";
+import "designSystem/organisms/mediaUploadGroupOrg.proto";
+import "designSystem/organisms/radioBtnGroupOrg.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.item";
+
+message DSBodyItem {
+  optional ua.gov.diia.types.ds.atoms.SectionTitleAtm sectionTitleAtm = 1;
+  optional ua.gov.diia.types.ds.organisms.SmallNotificationCarouselOrg
+      smallNotificationCarouselOrg = 2;
+  optional ua.gov.diia.types.ds.molecules.TextLabelContainerMlc
+      textLabelContainerMlc = 3;
+  optional ua.gov.diia.types.ds.molecules.BlackCardMlc blackCardMlc = 4;
+  optional ua.gov.diia.types.ds.organisms.HalvedCardCarouselOrg
+      halvedCardCarouselOrg = 5;
+  optional ua.gov.diia.types.ds.organisms.ListItemGroupOrg listItemGroupOrg = 6;
+  optional ua.gov.diia.types.ds.organisms.MediaTitleOrg mediaTitleOrg = 7;
+  optional ua.gov.diia.types.ds.organisms.ArticlePicCarouselOrg
+      articlePicCarouselOrg = 8;
+  optional ua.gov.diia.types.ds.molecules.ImageCardMlc imageCardMlc = 9;
+  optional ua.gov.diia.types.ds.organisms.VerticalCardCarouselOrg
+      verticalCardCarouselOrg = 10;
+  optional ua.gov.diia.types.ds.organisms.BtnIconRoundedGroupOrg
+      btnIconRoundedGroupOrg = 11;
+  optional ua.gov.diia.types.ds.molecules.WhiteCardMlc whiteCardMlc = 12;
+  optional ua.gov.diia.types.ds.molecules.TextLabelMlc textLabelMlc = 13;
+  optional ua.gov.diia.types.ds.molecules.TitleLabelMlc titleLabelMlc = 14;
+  optional ua.gov.diia.types.ds.molecules.AttentionMessageMlc
+      attentionMessageMlc = 15;
+  optional ua.gov.diia.types.ds.organisms.QrSharingOrg qrSharingOrg = 16;
+  optional ua.gov.diia.types.ds.molecules.StubMessageMlc stubMessageMlc = 17;
+  optional ua.gov.diia.types.ds.molecules.UserCardMlc userCardMlc = 18;
+  optional ua.gov.diia.types.ds.molecules.SubtitleLabelMlc subtitleLabelMlc =
+      19;
+  optional ua.gov.diia.types.ds.organisms.CalendarOrg calendarOrg = 20;
+  optional ua.gov.diia.types.ds.organisms.MediaUploadGroupOrg
+      mediaUploadGroupOrg = 21;
+  optional ua.gov.diia.types.ds.organisms.RadioBtnGroupOrg radioBtnGroupOrg =
+      22;
+}
+
+message DSTopGroupItem {
+  optional ua.gov.diia.types.ds.organisms.TopGroupOrg topGroupOrg = 1;
+}
+
+message DSBottomGroupItem {
+  optional ua.gov.diia.types.ds.organisms.BottomGroupOrg bottomGroupOrg = 1;
+}

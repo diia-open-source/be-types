@@ -1,0 +1,89 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.documents;
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.documents";
+
+import "google/protobuf/timestamp.proto";
+
+enum BirthCertificateSource {
+  actRecord = 0;
+  manual = 1;
+}
+
+enum RelationshipActRecordSubtype {
+  marriage = 0;
+  divorce = 1;
+}
+
+enum OwnerType {
+  owner = 0;
+  properUser = 1;
+}
+
+enum LicenseType {
+  permanent = 0;
+  issuedFirst = 1;
+}
+
+message DocumentData {
+  string docName = 1;
+  optional string docType = 2;
+  optional string docStatus = 3;
+  optional string docSum = 4;
+  optional string birthday = 5;
+  optional string rnokpp = 6;
+  optional string birthPlace = 7;
+  optional google.protobuf.Timestamp properUserUntil = 8;
+  optional string validUntil = 9;
+  optional string disease = 10;
+  optional string vaccine = 11;
+  optional string vaccineProduct = 12;
+  optional string vaccineHolder = 13;
+  optional string numberVaccine = 14;
+  optional string vaccinationDate = 15;
+  optional string member = 16;
+  optional string certificateIssuer = 17;
+  optional string firstPositiveTime = 18;
+  optional string testType = 19;
+  optional string testName = 20;
+  optional string testManufacturer = 21;
+  optional string sampleCollectionTime = 22;
+  optional string resultTestTime = 23;
+  optional string result = 24;
+  optional string testCenter = 25;
+  optional string properUser = 26;
+  optional string updateDate = 27;
+  optional string licensePlate = 28;
+  optional string vehicleLicenseId = 29;
+  optional string serialNumber = 30;
+  optional string number = 31;
+  optional string serial = 32;
+  optional string status = 33;
+  optional string name = 34;
+  optional string educationInstitutionName = 35;
+  optional string dataIssued = 36;
+  optional string expirationDate = 37; // DD.MM.YYYY
+  optional string pensionType = 38;
+  optional string licenceNumber = 39;
+  optional string organisation = 40;
+  optional string fullName = 41;
+  optional string fullNameEN = 42;
+  optional string fullNameHash = 43;
+  optional BirthCertificateSource source = 44;
+  optional OwnerType ownerType = 45;
+  optional bool isBooster = 46;
+  optional LicenseType licenseType = 47;
+  optional string category = 48;
+  optional string mark = 49;
+  optional string model = 50;
+  optional string vin = 51;
+  optional string owner = 52;
+  optional string properUserExpirationDate = 53;
+  optional string formOfEducation = 54;
+  optional string partnerFullName = 55;
+  optional string eventDate = 56; // iso
+  optional RelationshipActRecordSubtype relationshipActRecordSubtype = 57;
+  optional google.protobuf.Timestamp registrationDate = 58;
+}

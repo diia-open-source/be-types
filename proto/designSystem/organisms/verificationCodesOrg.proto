@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.organisms;
+
+import "designSystem/organisms/barCodeSharingOrg.proto";
+import "designSystem/organisms/toggleButtonGroupOrg.proto";
+import "designSystem/organisms/qrSharingOrg.proto";
+
+import "designSystem/molecules/stubMessageMlc.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.organisms";
+
+/**
+* @see
+* https://diia.atlassian.net/wiki/spaces/DIIA/pages/1365835783/verificationCodesOrg
+*/
+message VerificationCodesOrg {
+  optional string componentId = 1;
+  VerificationCode UA = 2;
+  optional VerificationCode EN = 3;
+}
+
+message VerificationCode {
+  ua.gov.diia.types.ds.organisms.QrSharingOrg qrSharingOrg = 1;
+  optional ua.gov.diia.types.ds.organisms.BarCodeSharingOrg barCodeSharingOrg = 2;
+  optional ua.gov.diia.types.ds.organisms.ToggleButtonGroupOrg toggleButtonGroupOrg = 3;
+  ua.gov.diia.types.ds.molecules.StubMessageMlc stubMessageMlc = 4;
+}
+
+

@@ -1,0 +1,15 @@
+
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.atoms.iconatm;
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.atoms";
+
+enum IconAtmActionType {
+  blackArrowIconRight = 0;
+  copy = 1;
+  insurance = 2;
+  close = 3;
+  ellipseMenu = 4;
+}

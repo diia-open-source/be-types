@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package ua.gov.diia.types;
+
+import "ui.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.publicservice";
+
+message ContactsResponse {
+  string title = 1;
+  AttentionMessage attentionMessage = 2;
+  optional string text = 3;
+  optional string phoneNumber = 4;
+  optional string email = 5;
+}

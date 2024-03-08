@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.token;
+
+import "token/gender.proto";
+import "documents/authDocument.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.token";
+
+message User {
+  string fName = 1;
+  string lName = 2;
+  string mName = 3;
+  string itn = 4;
+  Gender gender = 5;
+  string phoneNumber = 6;
+  string email = 7;
+  string passport = 8;
+  ua.gov.diia.types.documents.AuthDocument document = 9;
+  string birthDay = 10;
+  string addressOfRegistration = 11;
+  string addressOfBirth = 12;
+  optional string bankUserId = 13;
+  optional string edrpou = 14;
+}

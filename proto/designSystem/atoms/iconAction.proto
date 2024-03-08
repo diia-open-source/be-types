@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.atoms.icon;
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.atoms.icon";
+
+message IconAction {
+    string type = 1;
+    optional string subtype = 2;
+    optional string resource = 3;
+}

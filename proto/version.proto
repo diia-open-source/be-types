@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.appversion;
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types";
+
+message SingleVersionRecord {
+  optional string iOS = 1;
+  optional string Android = 2;
+  optional string Huawei = 3;
+  optional string Browser = 4;
+}
+
+message MultipleVersionRecord {
+  repeated string iOS = 1;
+  repeated string Android = 2;
+  repeated string Huawei = 3;
+  repeated string Browser = 4;
+}
+
+message AppVersions {
+  optional SingleVersionRecord minVersion = 1;
+  optional SingleVersionRecord maxVersion = 2;
+  optional MultipleVersionRecord versions = 3;
+}
+
+message PublicServiceAppVersionsBySession {
+  optional AppVersions Acquirer = 1;
+  optional AppVersions None = 2;
+  optional AppVersions Partner = 3;
+  optional AppVersions Temporary = 4;
+  optional AppVersions User = 5;
+  optional AppVersions EResident = 6;
+  optional AppVersions EResidentApplicant = 7;
+  optional AppVersions ServiceEntrance = 8;
+  optional AppVersions PortalUser = 9;
+  optional AppVersions ServiceUser = 10;
+  optional AppVersions CabinetUser = 11;
+}

@@ -1,0 +1,77 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.documents;
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.documents";
+
+import "designSystem/atoms/iconAtm.proto";
+import "designSystem/atoms/tickerAtm.proto";
+import "designSystem/atoms/chipStatusAtm.proto";
+import "designSystem/organisms/listItemGroupOrg.proto";
+import "designSystem/organisms/docHeadingOrg.proto";
+import "designSystem/organisms/tableBlockTwoColumnsPlaneOrg.proto";
+import "designSystem/organisms/docButtonHeadingOrg.proto";
+import "designSystem/organisms/tableBlockPlaneOrg.proto";
+import "designSystem/organisms/tableBlockTwoColumnsOrg.proto";
+import "designSystem/molecules/subtitleLabelMlc.proto";
+import "designSystem/molecules/smallEmojiPanelMlc.proto";
+import "documents/documentData.proto";
+
+message DocumentInstance {
+  string id = 1;
+  int32 docStatus = 2;
+  string docNumber = 3;
+  ua.gov.diia.types.documents.DocumentData docData = 4;
+  optional string shareLocalization = 5;
+  optional DataForDisplayingInOrderConfigurations
+      dataForDisplayingInOrderConfigurations = 6;
+  optional DocumentFrontCard frontCard = 7;
+  optional string frontCardBackground = 8;
+  optional string qr = 9;
+  repeated DocumentContentItem content = 10;
+  repeated DocumentFullInfoItem fullInfo = 11;
+}
+
+message DocumentFrontCard {
+  repeated FrontCardItem UA = 1;
+  repeated FrontCardItem EN = 2;
+}
+
+message FrontCardItem {
+  optional ua.gov.diia.types.ds.organisms.DocHeadingOrg docHeadingOrg = 1;
+  optional ua.gov.diia.types.ds.organisms.TableBlockTwoColumnsPlaneOrg
+      tableBlockTwoColumnsPlaneOrg = 2;
+  optional ua.gov.diia.types.ds.atoms.TickerAtm tickerAtm = 3;
+  optional ua.gov.diia.types.ds.organisms.DocButtonHeadingOrg
+      docButtonHeadingOrg = 4;
+  optional ua.gov.diia.types.ds.molecules.SubtitleLabelMlc subtitleLabelMlc = 5;
+  optional ua.gov.diia.types.ds.organisms.TableBlockPlaneOrg
+      tableBlockPlaneOrg = 6;
+  optional ua.gov.diia.types.ds.atoms.ChipStatusAtm chipStatusAtm = 7;
+  optional ua.gov.diia.types.ds.molecules.SmallEmojiPanelMlc
+      smallEmojiPanelMlc = 8;
+}
+
+message DocumentFullInfoItem {
+  optional ua.gov.diia.types.ds.organisms.DocHeadingOrg docHeadingOrg = 1;
+  optional ua.gov.diia.types.ds.atoms.TickerAtm tickerAtm = 2;
+  optional ua.gov.diia.types.ds.organisms.TableBlockTwoColumnsOrg
+      tableBlockTwoColumnsOrg = 3;
+  optional ua.gov.diia.types.ds.organisms.TableBlockPlaneOrg tableBlockOrg = 4;
+  optional ua.gov.diia.types.ds.organisms.ListItemGroupOrg listItemGroupOrg = 5;
+}
+
+message DocumentContentItem {
+  optional string image = 1;
+  string code = 2;
+}
+
+message DataForDisplayingInOrderConfigurations {
+  optional string logoLeft = 1;
+  optional ua.gov.diia.types.ds.atoms.IconAtm iconLeft = 2;
+  optional ua.gov.diia.types.ds.atoms.IconAtm iconRight = 3;
+  string label = 4;
+  optional string description = 5;
+  optional string id = 6;
+}
