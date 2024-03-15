@@ -26,7 +26,7 @@ This repository contains the package with common types for backend services.
 Example:
 
 ```
-git clone https://github.com/diia-open-source/types.git
+git clone https://github.com/diia-open-source/be-types.git types
 ```
 
 ---
