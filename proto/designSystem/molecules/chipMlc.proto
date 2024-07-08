@@ -17,6 +17,7 @@ message ChipMlc {
   optional bool active = 4;
   optional string selectedIcon = 5;
   optional ChipInfo chipInfo = 6;
+  optional string componentId = 7;
 }
 
 message ChipInfo {

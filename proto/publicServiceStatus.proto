@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package ua.gov.diia.types;
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.publicservice";
+
+enum PublicServiceStatus {
+  reserved 1, 2;
+  reserved "archival", "inDevelopment";
+
+  active = 0;
+  inactive = 3;
+}

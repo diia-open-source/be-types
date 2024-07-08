@@ -2,21 +2,25 @@ syntax = "proto3";
 
 package ua.gov.diia.types.ds.organisms;
 
+import "designSystem/molecules/chipMlc.proto";
+
 option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.organisms";
 
 /**
-@see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1343651864/chipTabsOrg+draft
+@see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1343651864/chipTabsOrg
 @partof designSystem/organisms/topGroupOrg.proto
  */
 message ChipTabsOrg {
   optional string label = 1;
   repeated ChipTabsOrgItem items = 2;
   string preselectedCode = 3;
+  optional string componentId = 4;
 }
 
 message ChipTabsOrgItem {
-  string code = 1;
-  string label = 2;
-  optional int32 count = 3;
+  optional string code = 1;  /* @deprecated use chipMlc */
+  optional string label = 2;  /* @deprecated use chipMlc */
+  optional int32 count = 3;  /* @deprecated use chipMlc */
+  ua.gov.diia.types.ds.molecules.ChipMlc chipMlc = 4;
 }

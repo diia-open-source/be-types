@@ -6,6 +6,7 @@ import "designSystem/atoms/btnPrimaryDefaultAtm.proto";
 import "designSystem/atoms/btnPlainAtm.proto";
 import "designSystem/organisms/checkboxBtnOrg.proto";
 import "designSystem/molecules/btnIconPlainGroupMlc.proto";
+import "designSystem/molecules/btnLoadIconPlainGroupMlc.proto";
 import "designSystem/atoms/btnPrimaryLargeAtm.proto";
 import "designSystem/atoms/btnStrokeDefaultAtm.proto";
 
@@ -23,4 +24,5 @@ message BottomGroupOrg {
     optional ua.gov.diia.types.ds.molecules.BtnIconPlainGroupMlc btnIconPlainGroupMlc  = 5;
     optional ua.gov.diia.types.ds.atoms.BtnPrimaryLargeAtm btnPrimaryLargeAtm = 6;
     optional ua.gov.diia.types.ds.atoms.BtnStrokeDefaultAtm btnStrokeDefaultAtm = 7;
+    optional ua.gov.diia.types.ds.molecules.BtnLoadIconPlainGroupMlc btnLoadIconPlainGroupMlc = 8;
 }

@@ -5,6 +5,9 @@ package ua.gov.diia.types.ds.icon;
 option java_multiple_files = true;
 option java_package = "xua.gov.diia.types.ds.icon";
 
+/**
+@see https://www.figma.com/file/vE5oErE2Lr7Nl7F69PJX2O/Design-System-(dev-team-library)?type=design&node-id=1364-6909&mode=design&t=SIK6HJrrDsMkpfww-0
+ */
 enum Icon {
     // Ellipse
     ellipseArmy = 0;
@@ -39,12 +42,15 @@ enum Icon {
     shelter = 27;
     doubleIcon = 97;
     safetyLarge = 99;
+    arrowSliderLeft = 106;
+    arrowSliderRight = 107;
 
     // Stroke
     add = 28;
     aidKit = 29;
     bag = 30;
     barcode = 31;
+    barcodeWhite = 105;
     calendar = 32;
     cancel = 33;
     close = 83;
@@ -68,6 +74,7 @@ enum Icon {
     newMessage = 50;
     police = 51;
     qr = 52;
+    qrWhite = 104;
     rating = 53;
     refresh = 54;
     reorder = 55;
@@ -91,6 +98,8 @@ enum Icon {
     qrScan = 94;
     qrScanWhite = 95;
     hide = 101;
+    update = 102;
+    oldDocInfo = 103;
 
     // Nav
     docActive = 64;

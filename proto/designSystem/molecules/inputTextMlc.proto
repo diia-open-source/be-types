@@ -20,5 +20,6 @@ message InputTextMlc {
   optional string value = 5;
   optional bool mandatory = 8;
   repeated ua.gov.diia.types.ds.atoms.ValidationAtm validation = 6;
-  optional string inputCode = 9; 
+  optional string inputCode = 9;
+  optional string componentId = 10;
 }

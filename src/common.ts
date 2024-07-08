@@ -1,6 +1,5 @@
-import { ActionVersion } from './actions'
+import { ActionVersion } from './actions/actionVersion'
 import { PlatformType } from './generated/platformType'
-import { PublicServiceCode } from './generated/publicServiceCode'
 import { ActionSession, SessionType } from './session'
 
 export enum IdentifierPrefix {
@@ -26,7 +25,7 @@ export interface ActHeaders {
     mobileUid?: string
     appVersion?: string
     platformVersion?: string
-    serviceCode?: PublicServiceCode
+    serviceCode?: string
     [key: string]: string | undefined
 }
 
@@ -41,5 +40,5 @@ export type LogData = {
     sessionOwnerId?: string
     userIdentifier?: string
     sessionType?: SessionType
-    serviceCode?: PublicServiceCode
+    serviceCode?: string
 }

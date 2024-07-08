@@ -29,6 +29,8 @@ message CardMlc {
     optional ua.gov.diia.types.ds.atoms.TickerAtm tickerAtm = 9;
     optional ua.gov.diia.types.ds.atoms.BtnPrimaryAdditionalAtm btnPrimaryAdditionalAtm = 10;
     optional ua.gov.diia.types.ds.atoms.BtnStrokeAdditionalAtm btnStrokeAdditionalAtm = 11;
+    optional string componentId = 12;
+    repeated CardMlcSubtitle subtitles = 13;
 }
 
 message CardMlcSubtitle {

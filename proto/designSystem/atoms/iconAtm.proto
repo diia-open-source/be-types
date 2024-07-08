@@ -15,4 +15,5 @@ message IconAtm {
   optional ua.gov.diia.types.ds.atoms.icon.IconAction action = 2;
   optional string accessibilityDescription = 3;
   optional string componentId = 4;
+  optional bool isEnable = 5;
 }

@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.atoms;
+
+import "designSystem/atoms/enums/buttonStateAtmType.proto";
+import "designSystem/atoms/buttonAction.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.atoms";
+
+/**
+ * @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1315602547/button#btnPrimaryWideAtm
+ */
+message BtnPrimaryWideAtm {
+  string componentId = 1;
+  string label = 2;
+  optional ua.gov.diia.types.ds.atoms.button.ButtonState state = 3;
+  optional ua.gov.diia.types.ds.atoms.button.ButtonAction action = 4;
+}

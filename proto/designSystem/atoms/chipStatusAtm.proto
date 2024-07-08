@@ -19,4 +19,5 @@ message ChipStatusAtm {
     string code = 1;
     string name = 2;
     ChipStatusAtmType type = 3;
+    optional string componentId = 4;
 }

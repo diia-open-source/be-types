@@ -9,3 +9,9 @@ message NameValue {
   string name = 1;
   string value = 2;
 }
+
+message NameValueWithCode {
+  string name = 1;
+  string value = 2;
+  optional string code = 3;
+}

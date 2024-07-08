@@ -1,4 +1,4 @@
-import { PeerCertificate } from 'tls'
+import { PeerCertificate } from 'node:tls'
 
 export enum HttpMethod {
     GET = 'GET',

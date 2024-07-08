@@ -9,4 +9,5 @@ enum ButtonState {
   enabled = 0;
   disabled = 1;
   invisible = 2;
+  loading = 3;
 }

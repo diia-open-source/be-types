@@ -12,7 +12,7 @@ option java_package = "ua.gov.diia.types.ds.organisms";
  * https://diia.atlassian.net/wiki/spaces/DIIA/pages/1363837067/toggleButtonGroupOrg
  */
 message ToggleButtonGroupOrg {
-  repeated ToggleButtonGroupItem item = 1;
+  repeated ToggleButtonGroupItem items = 1;
   string preselected = 2;
   optional string componentId = 3;
 }

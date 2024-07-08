@@ -12,11 +12,16 @@ option java_package = "ua.gov.diia.types.ds.molecules";
  * @partof designSystem/organisms/inputGroupOrg.proto
  */
 message InputDateMlc {
-  optional string id = 1;
+  reserved 5;
+  reserved "validation";
+
+  string id = 1;
   optional bool blocker = 2;
   string label = 3;
   optional string value = 4;
   optional string hint = 6;
-  repeated ua.gov.diia.types.ds.atoms.ValidationAtm validation = 5;
   optional string dateFormat = 7;
+  string componentId = 8;
+  optional bool mandatory = 9;
+  optional string placeholder = 10;
 }

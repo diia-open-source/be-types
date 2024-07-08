@@ -16,5 +16,5 @@ message BtnPlainAtm {
   string label = 1;
   optional ua.gov.diia.types.ds.atoms.button.ButtonState state = 2;
   optional ua.gov.diia.types.ds.atoms.button.ButtonAction action = 3;
-  optional string componentId = 4;
+  string componentId = 4;
 }

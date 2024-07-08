@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.organisms;
+
+import "designSystem/molecules/cardMlc.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.organisms";
+
+/**
+ * @see
+ * https://diia.atlassian.net/wiki/spaces/DIIA/pages/1552875566/paginationListOrg
+ */
+message PaginationListOrg {
+  message Item { optional ua.gov.diia.types.ds.molecules.CardMlc cardMlc = 1; }
+
+  string componentId = 1;
+  repeated Item items = 2;
+  optional int32 limit = 3;
+}

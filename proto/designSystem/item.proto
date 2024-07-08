@@ -3,6 +3,8 @@ syntax = "proto3";
 package ua.gov.diia.types.ds.item;
 
 import "designSystem/atoms/sectionTitleAtm.proto";
+import "designSystem/atoms/btnPlainAtm.proto";
+import "designSystem/atoms/btnPrimaryDefaultAtm.proto";
 import "designSystem/molecules/attentionMessageMlc.proto";
 import "designSystem/molecules/textLabelContainerMlc.proto";
 import "designSystem/molecules/textLabelMlc.proto";
@@ -13,6 +15,12 @@ import "designSystem/molecules/imageCardMlc.proto";
 import "designSystem/molecules/stubMessageMlc.proto";
 import "designSystem/molecules/userCardMlc.proto";
 import "designSystem/molecules/subtitleLabelMlc.proto";
+import "designSystem/molecules/statusMessageMlc.proto";
+import "designSystem/molecules/btnIconPlainGroupMlc.proto";
+import "designSystem/molecules/btnLoadIconPlainGroupMlc.proto";
+import "designSystem/molecules/cardMlc.proto";
+import "designSystem/molecules/inputNumberLargeMlc.proto";
+import "designSystem/molecules/timerMlc.proto";
 import "designSystem/organisms/halvedCardCarouselOrg.proto";
 import "designSystem/organisms/smallNotificationCarouselOrg.proto";
 import "designSystem/organisms/mediaTitleOrg.proto";
@@ -26,6 +34,16 @@ import "designSystem/organisms/bottomGroupOrg.proto";
 import "designSystem/organisms/calendarOrg.proto";
 import "designSystem/organisms/mediaUploadGroupOrg.proto";
 import "designSystem/organisms/radioBtnGroupOrg.proto";
+import "designSystem/organisms/editAutomaticallyDeterminedValueOrg.proto";
+import "designSystem/organisms/tableBlockPlaneOrg.proto";
+import "designSystem/organisms/tableBlockOrg.proto";
+import "designSystem/organisms/paymentInfoOrg.proto";
+import "designSystem/organisms/questionFormsOrg.proto";
+import "designSystem/organisms/checkboxBtnOrg.proto";
+import "designSystem/organisms/sharingCodesOrg.proto";
+import "designSystem/organisms/inputNumLargeTimeOrg.proto";
+import "designSystem/atoms/btnPrimaryWideAtm.proto";
+import "designSystem/organisms/paginationListOrg.proto";
 
 option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.item";
@@ -63,6 +81,25 @@ message DSBodyItem {
       mediaUploadGroupOrg = 21;
   optional ua.gov.diia.types.ds.organisms.RadioBtnGroupOrg radioBtnGroupOrg =
       22;
+  optional ua.gov.diia.types.ds.organisms.EditAutomaticallyDeterminedValueOrg
+      editAutomaticallyDeterminedValueOrg = 23;
+  optional ua.gov.diia.types.ds.molecules.StatusMessageMlc statusMessageMlc = 24;
+  optional ua.gov.diia.types.ds.molecules.BtnIconPlainGroupMlc btnIconPlainGroupMlc = 25;
+  optional ua.gov.diia.types.ds.organisms.TableBlockPlaneOrg tableBlockPlaneOrg = 26;
+  optional ua.gov.diia.types.ds.organisms.PaymentInfoOrg paymentInfoOrg = 27;
+  optional ua.gov.diia.types.ds.organisms.QuestionFormsOrg questionFormsOrg = 28;
+  optional ua.gov.diia.types.ds.organisms.CheckboxBtnOrg checkboxBtnOrg = 29;
+  optional ua.gov.diia.types.ds.atoms.BtnPlainAtm btnPlainAtm = 30;
+  optional ua.gov.diia.types.ds.atoms.BtnPrimaryDefaultAtm btnPrimaryDefaultAtm = 31;
+  optional ua.gov.diia.types.ds.molecules.BtnLoadIconPlainGroupMlc btnLoadIconPlainGroupMlc = 32;
+  optional ua.gov.diia.types.ds.organisms.SharingCodesOrg sharingCodesOrg = 33;
+  optional ua.gov.diia.types.ds.organisms.InputNumLargeTimeOrg inputNumberLargeOrg = 34;
+  optional ua.gov.diia.types.ds.molecules.CardMlc cardMlc = 35;
+  optional ua.gov.diia.types.ds.molecules.InputNumberLargeMlc inputNumberLargeMlc = 36;
+  optional ua.gov.diia.types.ds.molecules.TimerMlc timerMlc = 37;
+  optional ua.gov.diia.types.ds.atoms.BtnPrimaryWideAtm btnPrimaryWideAtm = 38;
+  optional ua.gov.diia.types.ds.organisms.PaginationListOrg paginationListOrg = 39;
+  optional ua.gov.diia.types.ds.organisms.TableBlockOrg tableBlockOrg = 40;
 }
 
 message DSTopGroupItem {

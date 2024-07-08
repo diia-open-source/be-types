@@ -5,6 +5,7 @@ package ua.gov.diia.types.documents;
 option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.documents";
 
+import "google/protobuf/empty.proto";
 import "designSystem/atoms/iconAtm.proto";
 import "designSystem/atoms/tickerAtm.proto";
 import "designSystem/atoms/chipStatusAtm.proto";
@@ -16,22 +17,7 @@ import "designSystem/organisms/tableBlockPlaneOrg.proto";
 import "designSystem/organisms/tableBlockTwoColumnsOrg.proto";
 import "designSystem/molecules/subtitleLabelMlc.proto";
 import "designSystem/molecules/smallEmojiPanelMlc.proto";
-import "documents/documentData.proto";
-
-message DocumentInstance {
-  string id = 1;
-  int32 docStatus = 2;
-  string docNumber = 3;
-  ua.gov.diia.types.documents.DocumentData docData = 4;
-  optional string shareLocalization = 5;
-  optional DataForDisplayingInOrderConfigurations
-      dataForDisplayingInOrderConfigurations = 6;
-  optional DocumentFrontCard frontCard = 7;
-  optional string frontCardBackground = 8;
-  optional string qr = 9;
-  repeated DocumentContentItem content = 10;
-  repeated DocumentFullInfoItem fullInfo = 11;
-}
+import "designSystem/molecules/listItemMlc.proto";
 
 message DocumentFrontCard {
   repeated FrontCardItem UA = 1;
@@ -60,6 +46,7 @@ message DocumentFullInfoItem {
       tableBlockTwoColumnsOrg = 3;
   optional ua.gov.diia.types.ds.organisms.TableBlockPlaneOrg tableBlockOrg = 4;
   optional ua.gov.diia.types.ds.organisms.ListItemGroupOrg listItemGroupOrg = 5;
+  optional google.protobuf.Empty verificationCodesOrg = 6;
 }
 
 message DocumentContentItem {

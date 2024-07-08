@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.organisms;
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.organisms";
+
+import "designSystem/molecules/qrCodeMlc.proto";
+import "designSystem/molecules/btnLoadIconPlainGroupMlc.proto";
+import "designSystem/molecules/stubMessageMlc.proto";
+
+/**
+ * @see
+ * https://diia.atlassian.net/wiki/spaces/DIIA/pages/1470955528/sharingCodesOrg
+ */
+message SharingCodesOrg {
+  message ExpireLabel {
+    string expireLabelFirst = 1;
+    optional string expireLabelLast = 2;
+    int32 timer = 3;
+  }
+
+  optional string componentId = 1;
+  optional ExpireLabel expireLabel = 2;
+  ua.gov.diia.types.ds.molecules.QrCodeMlc qrCodeMlc = 3;
+  optional ua.gov.diia.types.ds.molecules.BtnLoadIconPlainGroupMlc btnLoadIconPlainGroupMlc = 4;
+  ua.gov.diia.types.ds.molecules.StubMessageMlc stubMessageMlc = 5;
+}

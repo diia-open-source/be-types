@@ -20,5 +20,9 @@ message SelectorOrg {
   optional string value = 6;
   ua.gov.diia.types.ds.organisms.SelectorListWidgetOrg selectorListWidgetOrg = 7;
   repeated ua.gov.diia.types.ds.atoms.ValidationAtm validation = 8;
+  optional string componentId = 9;
+  optional string inputCode = 10;
+  optional bool mandatory = 11;
+  optional string valueId = 12; // item id which should be preselected
 }
 

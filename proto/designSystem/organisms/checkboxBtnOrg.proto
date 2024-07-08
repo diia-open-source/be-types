@@ -4,6 +4,7 @@ package ua.gov.diia.types.ds.organisms;
 
 import "designSystem/molecules/checkboxSquareMlc.proto";
 import "designSystem/atoms/btnPrimaryDefaultAtm.proto";
+import "designSystem/atoms/btnPrimaryWideAtm.proto";
 
 option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.organisms";
@@ -16,8 +17,9 @@ message CheckboxBtnOrg {
   reserved "checkboxSquareMlc";
 
   repeated CheckboxBtnOrgItem items = 3;
-  ua.gov.diia.types.ds.atoms.BtnPrimaryDefaultAtm btnPrimaryDefaultAtm = 2;
+  optional ua.gov.diia.types.ds.atoms.BtnPrimaryDefaultAtm btnPrimaryDefaultAtm = 2;
   optional string componentId = 4;
+  optional ua.gov.diia.types.ds.atoms.BtnPrimaryWideAtm btnPrimaryWideAtm = 5;
 }
 
 message CheckboxBtnOrgItem {

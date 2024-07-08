@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.molecules;
+
+import "designSystem/atoms/inputNumberLargeAtm.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.molecules";
+
+/**
+ * @see
+ * https://diia.atlassian.net/wiki/spaces/DIIA/pages/1363640366/inputNumberLargeMlc
+ */
+message InputNumberLargeMlc {
+  optional string componentId = 1;
+  repeated Item items = 2;
+
+  message Item { ua.gov.diia.types.ds.atoms.InputNumberLargeAtm inputNumberLargeAtm = 1; }
+}

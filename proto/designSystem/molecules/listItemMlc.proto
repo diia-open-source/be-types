@@ -21,6 +21,8 @@ message ListItemMlc {
   optional ListItemMlcIcon iconRight = 6;
   optional ua.gov.diia.types.ds.atoms.button.ButtonAction action = 7;
   optional ua.gov.diia.types.ds.atoms.button.ButtonState state = 8;
+  optional string componentId = 9;
+  optional string dataJson = 10;
 }
 
 message ListItemMlcIcon { ua.gov.diia.types.ds.icon.Icon code = 1; }

@@ -1,6 +1,7 @@
+import type { ObjectId } from 'bson'
 import { SetRequired } from 'type-fest'
 
-import { DiiaOfficeProfileData, ProfileFeature } from '../generated/profileFeature'
+import { ProfileFeature, UserFeatures } from '../generated/profileFeature'
 import { SessionType } from '../generated/session/sessionType'
 import {
     AcquirerTokenData,
@@ -15,8 +16,8 @@ import {
     UserTokenData,
 } from '../token'
 
-export interface UserFeatures {
-    [ProfileFeature.office]?: DiiaOfficeProfileData
+export interface BaseSession {
+    sessionType: SessionType
 }
 
 export interface UserSession {
@@ -45,14 +46,14 @@ export interface EResidentApplicantSession {
     user: EResidentApplicantTokenData
 }
 
-export interface AcquirerSession {
+export interface AcquirerSession<T extends ObjectId | string = ObjectId> {
     sessionType: SessionType.Acquirer
-    acquirer: AcquirerTokenData
+    acquirer: AcquirerTokenData<T>
 }
 
-export interface PartnerSession {
+export interface PartnerSession<T extends ObjectId | string = ObjectId> {
     sessionType: SessionType.Partner
-    partner: PartnerTokenData
+    partner: PartnerTokenData<T>
 }
 
 export interface TemporarySession {
@@ -60,9 +61,9 @@ export interface TemporarySession {
     temporary: TemporaryTokenData
 }
 
-export interface ServiceEntranceSession {
+export interface ServiceEntranceSession<T extends ObjectId | string = ObjectId> {
     sessionType: SessionType.ServiceEntrance
-    entrance: ServiceEntranceTokenData
+    entrance: ServiceEntranceTokenData<T>
 }
 
 export interface PortalUserSession {

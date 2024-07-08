@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.molecules;
+
+import "designSystem/atoms/btnLinkAtm.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.molecules";
+
+/**
+ * @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1536327694/timerMlc
+ */
+message TimerMlc {
+  optional string componentId = 1;
+  optional ExpireLabel expireLabel = 2;
+  StateAfterExpiration stateAfterExpiration = 3;
+
+  message ExpireLabel {
+    string expireLabelFirst = 1;
+    optional string expireLabelLast = 2;
+    int32 timer = 3;
+    repeated Parameter parameters = 4;
+  }
+
+  message Parameter {
+    string type = 1;
+    Data data = 2;
+  }
+
+  message Data {
+    string name = 1;
+    string alt = 2;
+    string resource = 3;
+  }
+
+  message StateAfterExpiration {
+    ua.gov.diia.types.ds.atoms.BtnLinkAtm btnLinkAtm = 1;
+  }
+}

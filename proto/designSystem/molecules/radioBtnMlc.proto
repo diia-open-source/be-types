@@ -9,9 +9,10 @@ option java_package = "ua.gov.diia.types.ds.molecules";
 
 /**
  * @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1363771393/radioBtnMlc
- * @partof designSystem/organisms/radioBtnGroupOrg.proto"
  */
 message RadioBtnMlc {
+  reserved 9;
+
   optional string id = 1;
   optional string logoLeft = 2;
   optional string logoRight = 3;
@@ -20,5 +21,7 @@ message RadioBtnMlc {
   optional string status = 6;
   optional ua.gov.diia.types.ds.atoms.checkable.CheckableAtmType state = 7;
   optional string componentId = 8;
-  map<string, string> data = 9;
+  optional bool isSelected = 10;
+  optional bool isEnabled = 11;
+  optional string dataJson = 12;
 }

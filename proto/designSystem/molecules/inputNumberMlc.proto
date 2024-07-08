@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.molecules;
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.molecules";
+
+/**
+ * @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1505263617/inputNumberMlc
+ */
+message InputNumberMlc {
+  optional string componentId = 1;
+  optional string inputCode = 2;
+  string label = 3;
+  optional string placeholder = 4;
+  optional string hint = 5;
+  optional string value = 6;
+  optional double maxValue = 7;
+  optional double minValue = 8;
+  optional bool mandatory = 10;
+  optional string errorMessage = 11;
+}

@@ -28,5 +28,10 @@ enum DiiaOfficeStatus {
 
 enum ProfileFeature {
   office = 0;
-  student = 1;
+  reserved 1;
+  student = 2;
+}
+
+message UserFeatures {
+    optional DiiaOfficeProfileData office = 1;
 }

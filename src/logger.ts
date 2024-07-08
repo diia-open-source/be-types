@@ -1,4 +1,4 @@
-import { AsyncLocalStorage } from 'async_hooks'
+import { AsyncLocalStorage } from 'node:async_hooks'
 
 import { AlsData, LogData } from './common'
 
@@ -18,7 +18,12 @@ export interface TrimmerOptions {
     maxStringLength: number
     maxObjectDepth: number
     maxObjectBreadth: number
-    redact: string[]
+    redact: {
+        fields?: Set<string>
+        paths?: Set<string>
+        fieldsToRedactFullname?: Set<string>
+    }
+    endLengthToLog: number
 }
 
 export interface LoggerOptions extends TrimmerOptions {
@@ -40,6 +45,8 @@ export interface Logger {
     trace(message: string, data?: unknown): void
     debug(message: string, data?: unknown): void
     io(message: string, data?: unknown): void
+
+    child(bindings: Record<string, unknown>): Logger
 
     prepareContext(context: LogData): LogData
 }

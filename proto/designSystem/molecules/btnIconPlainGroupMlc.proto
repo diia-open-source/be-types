@@ -9,6 +9,8 @@ option java_package = "ua.gov.diia.types.ds.molecules";
 
 /**
  * @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1363574785/btnIconPlainGroupMlc
+ *
+ * @deprecated renamed to BtnLoadIconPlainGroupMlc
  */
 message BtnIconPlainGroupMlc {
     optional string componentId = 1;

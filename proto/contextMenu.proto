@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package ua.gov.diia.types.contextmenu;
 import "version.proto";
-import "publicServiceCode.proto";
+import "publicServiceStatus.proto";
 import "profileFeature.proto";
 import "session/sessionType.proto";
 
@@ -34,7 +34,7 @@ message PublicServiceContextMenu {
 message PublicServiceSettings {
   string id = 1;
   repeated string categories =2;
-  PublicServiceCode code = 3;
+  string code = 3;
   string name = 4;
   PublicServiceStatus status = 5;
   repeated string segments = 6;

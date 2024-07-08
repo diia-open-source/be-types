@@ -10,4 +10,5 @@ message ButtonAction {
   optional string subtype = 2;
   optional string resource = 3;
   optional string condition = 4;
+  optional string subresource = 5;
 }

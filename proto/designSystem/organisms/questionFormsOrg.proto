@@ -6,6 +6,7 @@ import "designSystem/molecules/inputDateMlc.proto";
 import "designSystem/molecules/inputTextMlc.proto";
 import "designSystem/molecules/checkboxSquareMlc.proto";
 import "designSystem/organisms/selectorOrg.proto";
+import "designSystem/organisms/inputDateTimeOrg.proto";
 
 option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.organisms";
@@ -18,6 +19,7 @@ message QuestionFormsOrg {
   optional string title = 2;
   optional string condition = 3;
   repeated QuestionFormsOrgItem items = 4;
+  optional string componentId = 5;
 }
 
 message QuestionFormsOrgItem {
@@ -29,4 +31,5 @@ message QuestionFormsOrgItem {
   optional ua.gov.diia.types.ds.molecules.InputDateMlc inputDateMlc = 3;
   optional ua.gov.diia.types.ds.organisms.SelectorOrg selectorOrg = 4;
   optional ua.gov.diia.types.ds.molecules.CheckboxSquareMlc checkboxSquareMlc = 5;
+  optional ua.gov.diia.types.ds.organisms.InputDateTimeOrg inputDateTimeOrg = 6;
 }

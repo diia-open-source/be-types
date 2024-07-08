@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.molecules;
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.molecules";
+
+/**
+ * @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1467875515/dividerLineMlc
+ */
+message DividerLineMlc {
+  optional string componentId = 1;
+  DividerLineMlcType type = 2;
+}
+
+enum DividerLineMlcType {
+  DEFAULT = 0;
+}

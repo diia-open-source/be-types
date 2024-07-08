@@ -2,8 +2,6 @@ export * from './documents'
 
 export * from './token'
 
-export * from './partnerScope'
-
 export * from './session'
 
 export * from './common'
@@ -21,8 +19,6 @@ export * from './http'
 export * from './logger'
 
 export * from './durations'
-
-export * from './publicServiceCodes'
 
 export * from './units'
 

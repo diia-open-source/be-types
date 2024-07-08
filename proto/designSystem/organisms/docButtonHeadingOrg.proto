@@ -17,6 +17,7 @@ option java_package = "ua.gov.diia.types.ds.organisms";
  */
 message DocButtonHeadingOrg {
     reserved 3;
+    reserved "ellipseMenu";
 
     optional ua.gov.diia.types.ds.molecules.HeadingWithSubtitlesMlc headingWithSubtitlesMlc = 1;
     optional ua.gov.diia.types.ds.molecules.DocNumberCopyMlc docNumberCopyMlc = 2;

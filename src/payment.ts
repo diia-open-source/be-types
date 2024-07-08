@@ -14,4 +14,5 @@ export enum PaymentTarget {
     MilitaryBonds = 'military-bonds',
     CourtPenalties = 'court-penalties',
     VehicleReRegistration = 'vehicle-re-registration',
+    Marriage = 'marriage',
 }

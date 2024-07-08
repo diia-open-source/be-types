@@ -90,6 +90,9 @@ export interface ServiceUserActionArguments<T extends ServiceUserActionHeaders =
 
 export declare type ServiceActionArguments<T extends ActHeaders = ActHeaders> = BaseActionArguments<T>
 
+/**
+ * @deprecated ActionArguments is deprecated in favor of ActionContext
+ */
 export type ActionArguments =
     | ServiceActionArguments
     | UserActionArguments
@@ -101,3 +104,4 @@ export type ActionArguments =
     | TemporaryActionArguments
     | ServiceEntranceActionArguments
     | PortalUserActionArguments
+    | ServiceUserActionArguments

@@ -6,7 +6,8 @@ import { SessionType } from '../generated/session/sessionType'
 import { PortalUser } from '../generated/token/portalUser'
 import { AuthEntryPoint, RefreshToken } from '../generated/token/tokenData'
 import { User } from '../generated/token/user'
-import { PartnerScopes } from '../partnerScope'
+
+/* Generic `T = string` in TokenData interfaces is used in services with diia-app >= 15 where convertParamsByRules is dropped to map string into ObjectId */
 
 interface BaseTokenData<T extends SessionType> {
     refreshToken: RefreshToken | null
@@ -51,9 +52,9 @@ export type AppUser = UserTokenData | EResidentTokenData | CabinetUserTokenData
 
 export type AppUserSessionType = SessionType.User | SessionType.EResident | SessionType.CabinetUser
 
-export interface AcquirerTokenData extends BaseTokenData<SessionType.Acquirer> {
-    _id: ObjectId
-    partnerId?: ObjectId
+export interface AcquirerTokenData<T extends ObjectId | string = ObjectId> extends BaseTokenData<SessionType.Acquirer> {
+    _id: T
+    partnerId?: T
 }
 
 export interface PortalUserTokenData extends PortalUser, BaseTokenData<SessionType.PortalUser> {
@@ -61,17 +62,17 @@ export interface PortalUserTokenData extends PortalUser, BaseTokenData<SessionTy
     permissions?: PortalUserPermissions
 }
 
-export interface PartnerTokenData extends BaseTokenData<SessionType.Partner> {
-    _id: ObjectId
-    scopes: PartnerScopes
+export interface PartnerTokenData<T extends ObjectId | string = ObjectId> extends BaseTokenData<SessionType.Partner> {
+    _id: T
+    scopes: Record<string, string[]>
 }
 
 export interface TemporaryTokenData extends BaseTokenData<SessionType.Temporary> {
     mobileUid: string
 }
 
-export interface ServiceEntranceTokenData extends BaseTokenData<SessionType.ServiceEntrance> {
-    acquirerId: ObjectId
+export interface ServiceEntranceTokenData<T extends ObjectId | string = ObjectId> extends BaseTokenData<SessionType.ServiceEntrance> {
+    acquirerId: T
     branchHashId: string
     offerHashId: string
     offerRequestHashId: string

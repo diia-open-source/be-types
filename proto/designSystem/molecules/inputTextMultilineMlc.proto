@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.molecules;
+
+import "designSystem/atoms/validationAtm.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.molecules";
+
+/**
+ * @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1516044383/inputTextMultilineMlc
+ */
+message InputTextMultilineMlc {
+  optional string componentId = 1;
+  optional string inputCode = 2;
+  string label = 3;
+  optional string placeholder = 4;
+  optional string hint = 5;
+  optional string value = 6;
+  optional bool mandatory = 7;
+  repeated ua.gov.diia.types.ds.atoms.ValidationAtm validation = 8;
+}
