@@ -41,4 +41,5 @@ export type LogData = {
     userIdentifier?: string
     sessionType?: SessionType
     serviceCode?: string
+    flags?: string[]
 }

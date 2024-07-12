@@ -21,6 +21,7 @@ import "designSystem/molecules/btnLoadIconPlainGroupMlc.proto";
 import "designSystem/molecules/cardMlc.proto";
 import "designSystem/molecules/inputNumberLargeMlc.proto";
 import "designSystem/molecules/timerMlc.proto";
+import "designSystem/molecules/searchInputMlc.proto";
 import "designSystem/organisms/halvedCardCarouselOrg.proto";
 import "designSystem/organisms/smallNotificationCarouselOrg.proto";
 import "designSystem/organisms/mediaTitleOrg.proto";
@@ -104,6 +105,7 @@ message DSBodyItem {
 
 message DSTopGroupItem {
   optional ua.gov.diia.types.ds.organisms.TopGroupOrg topGroupOrg = 1;
+  optional ua.gov.diia.types.ds.molecules.SearchInputMlc searchInputMlc = 2;
 }
 
 message DSBottomGroupItem {

@@ -1,6 +1,6 @@
 {
     "name": "@diia-inhouse/types",
-    "version": "6.33.0",
+    "version": "6.35.2",
     "description": "Core types",
     "main": "dist/index.js",
     "types": "dist/types/index.d.ts",

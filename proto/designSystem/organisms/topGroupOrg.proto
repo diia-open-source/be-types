@@ -4,7 +4,6 @@ package ua.gov.diia.types.ds.organisms;
 
 import "designSystem/molecules/navigationPanelMlc.proto";
 import "designSystem/molecules/titleGroupMlc.proto";
-import "designSystem/molecules/searchInputMlc.proto";
 import "designSystem/organisms/chipTabsOrg.proto";
 
 option java_multiple_files = true;
@@ -19,5 +18,4 @@ message TopGroupOrg {
   optional ua.gov.diia.types.ds.organisms.ChipTabsOrg chipTabsOrg = 2;
   optional ua.gov.diia.types.ds.molecules.TitleGroupMlc titleGroupMlc = 3;
   optional string componentId = 4;
-  optional ua.gov.diia.types.ds.molecules.SearchInputMlc searchInputMlc = 5;
 }
