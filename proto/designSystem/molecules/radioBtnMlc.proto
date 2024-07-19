@@ -16,7 +16,6 @@ message RadioBtnMlc {
   optional string id = 1;
   optional string logoLeft = 2;
   optional string logoRight = 3;
-  optional string largeLogoRight = 13;
   string label = 4;
   optional string description = 5;
   optional string status = 6;

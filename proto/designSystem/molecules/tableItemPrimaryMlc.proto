@@ -12,7 +12,7 @@ option java_package = "ua.gov.diia.types.ds.molecules";
  */
 
 message TableItemPrimaryMlc {
-    optional string label = 1;
+    string label = 1;
     string value = 2;
     optional ua.gov.diia.types.ds.atoms.IconAtm icon = 3;
     optional string componentId = 4;
