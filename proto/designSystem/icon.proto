@@ -6,7 +6,7 @@ option java_multiple_files = true;
 option java_package = "xua.gov.diia.types.ds.icon";
 
 /**
-@see https://www.figma.com/file/vE5oErE2Lr7Nl7F69PJX2O/Design-System-(dev-team-library)?type=design&node-id=1364-6909&mode=design&t=SIK6HJrrDsMkpfww-0
+ * @see https://www.figma.com/file/vE5oErE2Lr7Nl7F69PJX2O/Design-System-(dev-team-library)?type=design&node-id=1364-6909&mode=design&t=SIK6HJrrDsMkpfww-0
  */
 enum Icon {
     // Ellipse
@@ -37,13 +37,15 @@ enum Icon {
     ellipseSticker = 22;
     ellipseTrident = 23;
     ellipseWhiteArrowRight = 24;
+    ellipseInfo = 115;
     pn = 25;
     safety = 26;
     shelter = 27;
     doubleIcon = 97;
     safetyLarge = 99;
-    arrowSliderLeft = 106;
-    arrowSliderRight = 107;
+    cashbackPayment = 109;
+    cashbackCharge = 110;
+    cashbackReturn = 111;
 
     // Stroke
     add = 28;
@@ -100,6 +102,12 @@ enum Icon {
     hide = 101;
     update = 102;
     oldDocInfo = 103;
+    info = 108;
+    arrowSliderLeft = 106;
+    arrowSliderRight = 107;
+    paymentCash = 112;
+    chargeCash = 113;
+    returnCash = 114;
 
     // Nav
     docActive = 64;

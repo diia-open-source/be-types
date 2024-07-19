@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.organisms;
+
+import "designSystem/organisms/radioBtnGroupOrg.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.organisms";
+
+/**
+ * @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1625686133/radioBtnWithAltOrg
+ */
+message RadioBtnWithAltOrg {
+  message Item {
+    ua.gov.diia.types.ds.organisms.RadioBtnGroupOrg radioBtnGroupOrg = 1;
+  }
+
+  string componentId = 1;
+  repeated Item items = 2;
+}
