@@ -5,7 +5,11 @@ package ua.gov.diia.types.ds.item;
 import "designSystem/atoms/sectionTitleAtm.proto";
 import "designSystem/atoms/btnPlainAtm.proto";
 import "designSystem/atoms/btnPrimaryDefaultAtm.proto";
+import "designSystem/atoms/tickerAtm.proto";
+import "designSystem/atoms/articlePicAtm.proto";
+
 import "designSystem/molecules/attentionMessageMlc.proto";
+import "designSystem/molecules/attentionIconMessageMlc.proto";
 import "designSystem/molecules/textLabelContainerMlc.proto";
 import "designSystem/molecules/textLabelMlc.proto";
 import "designSystem/molecules/titleLabelMlc.proto";
@@ -21,6 +25,9 @@ import "designSystem/molecules/btnLoadIconPlainGroupMlc.proto";
 import "designSystem/molecules/cardMlc.proto";
 import "designSystem/molecules/inputNumberLargeMlc.proto";
 import "designSystem/molecules/timerMlc.proto";
+import "designSystem/molecules/searchInputMlc.proto";
+import "designSystem/molecules/alertCardMlc.proto";
+
 import "designSystem/organisms/halvedCardCarouselOrg.proto";
 import "designSystem/organisms/smallNotificationCarouselOrg.proto";
 import "designSystem/organisms/mediaTitleOrg.proto";
@@ -44,6 +51,9 @@ import "designSystem/organisms/sharingCodesOrg.proto";
 import "designSystem/organisms/inputNumLargeTimeOrg.proto";
 import "designSystem/atoms/btnPrimaryWideAtm.proto";
 import "designSystem/organisms/paginationListOrg.proto";
+import "designSystem/organisms/dashboardCardTileOrg.proto";
+import "designSystem/organisms/docHeadingOrg.proto";
+import "designSystem/organisms/radioBtnWithAltOrg.proto";
 
 option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.item";
@@ -100,10 +110,18 @@ message DSBodyItem {
   optional ua.gov.diia.types.ds.atoms.BtnPrimaryWideAtm btnPrimaryWideAtm = 38;
   optional ua.gov.diia.types.ds.organisms.PaginationListOrg paginationListOrg = 39;
   optional ua.gov.diia.types.ds.organisms.TableBlockOrg tableBlockOrg = 40;
+  optional ua.gov.diia.types.ds.molecules.AttentionIconMessageMlc attentionIconMessageMlc = 41;
+  optional ua.gov.diia.types.ds.molecules.AlertCardMlc alertCardMlc = 42;
+  optional ua.gov.diia.types.ds.organisms.DashboardCardTileOrg dashboardCardTileOrg = 43;
+  optional ua.gov.diia.types.ds.organisms.DocHeadingOrg docHeadingOrg = 44;
+  optional ua.gov.diia.types.ds.atoms.TickerAtm tickerAtm = 45;
+  optional ua.gov.diia.types.ds.organisms.RadioBtnWithAltOrg radioBtnWithAltOrg = 46;
+  optional ua.gov.diia.types.ds.atoms.ArticlePicAtm articlePicAtm = 47;
 }
 
 message DSTopGroupItem {
   optional ua.gov.diia.types.ds.organisms.TopGroupOrg topGroupOrg = 1;
+  optional ua.gov.diia.types.ds.molecules.SearchInputMlc searchInputMlc = 2;
 }
 
 message DSBottomGroupItem {

@@ -22,6 +22,7 @@ enum PublicServiceContextMenuType {
   rating = 8;
   downloadList = 9;
   restoreRecords = 10;
+  onboarding = 11;
 }
 
 message PublicServiceContextMenu {
