@@ -46,6 +46,10 @@ enum Icon {
     cashbackPayment = 109;
     cashbackCharge = 110;
     cashbackReturn = 111;
+    madeInUa = 116;
+    cardVisa = 117;
+    cardMastercard = 118;
+    cardProstir = 119;
 
     // Stroke
     add = 28;

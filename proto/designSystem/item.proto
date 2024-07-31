@@ -51,6 +51,7 @@ import "designSystem/organisms/sharingCodesOrg.proto";
 import "designSystem/organisms/inputNumLargeTimeOrg.proto";
 import "designSystem/atoms/btnPrimaryWideAtm.proto";
 import "designSystem/organisms/paginationListOrg.proto";
+import "designSystem/organisms/paginationListWhiteOrg.proto";
 import "designSystem/organisms/dashboardCardTileOrg.proto";
 import "designSystem/organisms/docHeadingOrg.proto";
 import "designSystem/organisms/radioBtnWithAltOrg.proto";
@@ -117,6 +118,7 @@ message DSBodyItem {
   optional ua.gov.diia.types.ds.atoms.TickerAtm tickerAtm = 45;
   optional ua.gov.diia.types.ds.organisms.RadioBtnWithAltOrg radioBtnWithAltOrg = 46;
   optional ua.gov.diia.types.ds.atoms.ArticlePicAtm articlePicAtm = 47;
+  optional ua.gov.diia.types.ds.organisms.PaginationListWhiteOrg paginationListWhiteOrg = 48;
 }
 
 message DSTopGroupItem {
