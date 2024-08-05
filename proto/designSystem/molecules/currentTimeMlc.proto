@@ -12,6 +12,7 @@ message CurrentTimeMlc {
     optional string componentId = 1;
     string label = 2;
     optional CurrentTimeMlcAction action = 3;
+    optional string maxDate = 4;
 }
 
 message CurrentTimeMlcAction {
