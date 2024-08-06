@@ -9,15 +9,17 @@ import "designSystem/atoms/buttonAction.proto";
 import "designSystem/atoms/smallIconAtm.proto";
 import "designSystem/atoms/doubleIconAtm.proto";
 import "designSystem/atoms/iconAtm.proto";
+import "designSystem/atoms/largeIconAtm.proto";
 
 /**
-@see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1390051329/whiteCardMlc
+ * @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1390051329/whiteCardMlc
  */
 message WhiteCardMlc {
   optional ua.gov.diia.types.ds.atoms.SmallIconAtm smallIconAtm = 1;
   optional ua.gov.diia.types.ds.atoms.IconAtm iconAtm = 2;
   optional ua.gov.diia.types.ds.atoms.DoubleIconAtm doubleIconAtm = 3;
-  string title = 4;
+  optional ua.gov.diia.types.ds.atoms.LargeIconAtm largeIconAtm = 7;
+  optional string title = 4;
   string label = 5;
   ua.gov.diia.types.ds.atoms.button.ButtonAction action = 6;
 }
