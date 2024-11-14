@@ -9,6 +9,6 @@ option java_package = "ua.gov.diia.types.ds.molecules";
  * @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1343750179/titleLabelMlc
  */
 message TitleLabelMlc {
-    string label = 1;
-    optional string componentId = 2;
+  string label = 1;
+  optional string componentId = 2;
 }

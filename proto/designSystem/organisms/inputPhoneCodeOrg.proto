@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.organisms;
+
+import "designSystem/atoms/validationAtm.proto";
+import "designSystem/molecules/inputPhoneMlc.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.organisms";
+
+/**
+ * @see
+ * https://diia.atlassian.net/wiki/spaces/DIIA/pages/1702035483/inputPhoneCodeOrg
+ */
+message InputPhoneCodeOrg {
+  string label = 1;
+  optional string componentId = 2;
+  optional string hint = 3;
+  optional bool mandatory = 4;
+  string inputCode = 5;
+  optional string codeValueId = 6;
+  optional bool codeValueIsEditable = 7;
+  optional ua.gov.diia.types.ds.molecules.InputPhoneMlc inputPhoneMlc = 8;
+  repeated InputPhoneCodeItem codes = 9;
+}
+
+message InputPhoneCodeItem {
+  string id = 1;
+  optional string maskCode = 2;
+  optional string placeholder = 3;
+  string label = 4;
+  string description = 5;
+  string value = 6;
+  string icon = 7;
+  repeated ua.gov.diia.types.ds.atoms.ValidationAtm validation = 8;
+}

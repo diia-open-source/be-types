@@ -2,9 +2,9 @@ syntax = "proto3";
 
 package ua.gov.diia.types.ds.organisms;
 
-import "designSystem/molecules/radioBtnMlc.proto";
-import "designSystem/molecules/inputTextMlc.proto";
 import "designSystem/atoms/btnPlainIconAtm.proto";
+import "designSystem/molecules/inputTextMlc.proto";
+import "designSystem/molecules/radioBtnMlc.proto";
 
 option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.organisms";
@@ -21,6 +21,7 @@ message RadioBtnGroupOrg {
   optional string componentId = 6;
   optional string inputCode = 7;
   optional ua.gov.diia.types.ds.atoms.BtnPlainIconAtm btnPlainIconAtm = 8;
+  optional bool mandatory = 9;
 }
 
 message RadioBtnGroupOrgItem {

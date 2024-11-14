@@ -11,8 +11,8 @@ option java_package = "ua.gov.diia.types.ds.organisms";
  * @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1467941027/tableBlockAccordionOrg
  */
 message TableBlockAccordionOrg {
-    optional string componentId = 1;
-    string heading = 2;
-    bool isOpen = 3;
-    repeated ua.gov.diia.types.ds.molecules.TableItemMlc items = 4;
+  optional string componentId = 1;
+  string heading = 2;
+  bool isOpen = 3;
+  repeated ua.gov.diia.types.ds.molecules.TableItemMlc items = 4;
 }

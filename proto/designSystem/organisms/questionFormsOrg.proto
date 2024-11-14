@@ -2,11 +2,12 @@ syntax = "proto3";
 
 package ua.gov.diia.types.ds.organisms;
 
+import "designSystem/molecules/checkboxSquareMlc.proto";
 import "designSystem/molecules/inputDateMlc.proto";
 import "designSystem/molecules/inputTextMlc.proto";
-import "designSystem/molecules/checkboxSquareMlc.proto";
-import "designSystem/organisms/selectorOrg.proto";
 import "designSystem/organisms/inputDateTimeOrg.proto";
+import "designSystem/organisms/inputPhoneCodeOrg.proto";
+import "designSystem/organisms/selectorOrg.proto";
 
 option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.organisms";
@@ -32,4 +33,5 @@ message QuestionFormsOrgItem {
   optional ua.gov.diia.types.ds.organisms.SelectorOrg selectorOrg = 4;
   optional ua.gov.diia.types.ds.molecules.CheckboxSquareMlc checkboxSquareMlc = 5;
   optional ua.gov.diia.types.ds.organisms.InputDateTimeOrg inputDateTimeOrg = 6;
+  optional ua.gov.diia.types.ds.organisms.InputPhoneCodeOrg inputPhoneCodeOrg = 7;
 }

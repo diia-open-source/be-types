@@ -9,8 +9,8 @@ option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.organisms";
 
 /**
-@see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1363771438/selectorOrg
- */
+ @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1363771438/selectorOrg
+*/
 message SelectorOrg {
   optional string id = 1;
   optional bool blocker = 2;
@@ -25,4 +25,3 @@ message SelectorOrg {
   optional bool mandatory = 11;
   optional string valueId = 12; // item id which should be preselected
 }
-

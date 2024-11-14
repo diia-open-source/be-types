@@ -8,11 +8,10 @@ option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.molecules";
 
 /**
-@see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1373470769/docNumberCopyWhiteMlc
- */
-message DocNumberCopyWhiteMlc
- {
-    optional string label = 1;
-    string value = 2;
-    optional ua.gov.diia.types.ds.atoms.IconAtm icon = 3;
+ @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1373470769/docNumberCopyWhiteMlc
+*/
+message DocNumberCopyWhiteMlc {
+  optional string label = 1;
+  string value = 2;
+  optional ua.gov.diia.types.ds.atoms.IconAtm icon = 3;
 }

@@ -12,4 +12,8 @@ export enum DocStatus {
     NoRequiredData = 1017,
     Updating = 1018,
     Deleting = 1019,
+    Destroyed = 1050,
+    PermitRevoked = 2501,
+    PermitExpired = 2502,
+    NoPermit = 2503,
 }

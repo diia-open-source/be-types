@@ -8,7 +8,7 @@ option java_package = "ua.gov.diia.types.ds.atoms";
 /**
  * @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1371570378/articlePicAtm
  */
-message ArticlePicAtm { 
+message ArticlePicAtm {
   string image = 1;
   optional string componentId = 2;
 }

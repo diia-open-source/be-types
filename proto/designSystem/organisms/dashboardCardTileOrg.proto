@@ -11,7 +11,7 @@ option java_package = "ua.gov.diia.types.ds.organisms";
  * @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1625620527/dashboardCardTileOrg
  */
 message DashboardCardTileOrg {
-  message Item { 
+  message Item {
     optional ua.gov.diia.types.ds.molecules.DashboardCardMlc dashboardCardMlc = 1;
   }
 

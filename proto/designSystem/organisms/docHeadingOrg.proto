@@ -2,21 +2,21 @@ syntax = "proto3";
 
 package ua.gov.diia.types.ds.organisms;
 
-import "designSystem/molecules/headingWithSubtitlesMlc.proto";
-import "designSystem/molecules/headingWithSubtitleWhiteMlc.proto";
 import "designSystem/molecules/docNumberCopyMlc.proto";
 import "designSystem/molecules/docNumberCopyWhiteMlc.proto";
+import "designSystem/molecules/headingWithSubtitleWhiteMlc.proto";
+import "designSystem/molecules/headingWithSubtitlesMlc.proto";
 
 option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.organisms";
 
 /**
-@see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1323401246/docHeadingOrg
- */
+ @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1323401246/docHeadingOrg
+*/
 message DocHeadingOrg {
-    optional ua.gov.diia.types.ds.molecules.HeadingWithSubtitlesMlc headingWithSubtitlesMlc = 1;
-    optional ua.gov.diia.types.ds.molecules.DocNumberCopyMlc docNumberCopyMlc = 2;
-    optional ua.gov.diia.types.ds.molecules.HeadingWithSubtitleWhiteMlc headingWithSubtitleWhiteMlc = 3;
-    optional ua.gov.diia.types.ds.molecules.DocNumberCopyWhiteMlc docNumberCopyWhiteMlc = 4;
-    optional string componentId = 5;
+  optional ua.gov.diia.types.ds.molecules.HeadingWithSubtitlesMlc headingWithSubtitlesMlc = 1;
+  optional ua.gov.diia.types.ds.molecules.DocNumberCopyMlc docNumberCopyMlc = 2;
+  optional ua.gov.diia.types.ds.molecules.HeadingWithSubtitleWhiteMlc headingWithSubtitleWhiteMlc = 3;
+  optional ua.gov.diia.types.ds.molecules.DocNumberCopyWhiteMlc docNumberCopyWhiteMlc = 4;
+  optional string componentId = 5;
 }

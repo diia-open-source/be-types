@@ -9,14 +9,14 @@ option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.molecules";
 
 message TableItemVerticalMlc {
-    optional string supportingValue = 1;
-    optional string label = 2;
-    optional string secondaryLabel = 3;
-    optional string value = 4;
-    optional string secondaryValue = 5;
-    optional string valueImage = 6;
-    repeated string valueImages = 7;
-    repeated ua.gov.diia.types.ds.atoms.SimpleIconAtm valueIcons = 8;
-    optional ua.gov.diia.types.ds.atoms.IconAtm icon = 9;
-    optional string componentId = 10;
+  optional string supportingValue = 1;
+  optional string label = 2;
+  optional string secondaryLabel = 3;
+  optional string value = 4;
+  optional string secondaryValue = 5;
+  optional string valueImage = 6;
+  repeated string valueImages = 7;
+  repeated ua.gov.diia.types.ds.atoms.SimpleIconAtm valueIcons = 8;
+  optional ua.gov.diia.types.ds.atoms.IconAtm icon = 9;
+  optional string componentId = 10;
 }

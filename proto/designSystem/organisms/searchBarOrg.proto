@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.organisms;
+
+import "designSystem/atoms/btnWhiteAdditionalIconAtm.proto";
+import "designSystem/molecules/searchInputMlc.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.organisms";
+
+/*
+ * @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1749418314/searchBarOrg
+ */
+message SearchBarOrg {
+  optional string componentId = 1;
+  ua.gov.diia.types.ds.molecules.SearchInputMlc searchInputMlc = 2;
+  ua.gov.diia.types.ds.atoms.BtnWhiteAdditionalIconAtm btnWhiteAdditionalIconAtm = 3;
+}

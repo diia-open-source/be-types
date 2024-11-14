@@ -2,12 +2,11 @@ syntax = "proto3";
 
 package ua.gov.diia.types.ds.molecules;
 
-import "designSystem/icon.proto";
-
 import "designSystem/atoms/amountAtm.proto";
 import "designSystem/atoms/buttonAction.proto";
 import "designSystem/atoms/chipStatusAtm.proto";
 import "designSystem/atoms/enums/buttonStateAtmType.proto";
+import "designSystem/icon.proto";
 
 option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.molecules";
@@ -28,6 +27,14 @@ message ListItemMlc {
   optional string dataJson = 10;
   optional ua.gov.diia.types.ds.atoms.AmountAtm amountAtm = 11;
   optional ua.gov.diia.types.ds.atoms.ChipStatusAtm chipStatusAtm = 12;
+  optional ListItemMlcBigLeftIcon bigIconLeft = 13;
+  optional string leftLogoLink = 14;
 }
 
-message ListItemMlcIcon { ua.gov.diia.types.ds.icon.Icon code = 1; }
+message ListItemMlcIcon {
+  ua.gov.diia.types.ds.icon.Icon code = 1;
+}
+
+message ListItemMlcBigLeftIcon {
+  string code = 1;
+}

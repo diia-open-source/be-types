@@ -3,7 +3,6 @@ syntax = "proto3";
 package ua.gov.diia.types.ds.organisms;
 
 import "designSystem/atoms/greyTitleAtm.proto";
-
 import "designSystem/molecules/cardMlc.proto";
 import "designSystem/molecules/listItemMlc.proto";
 
@@ -17,9 +16,10 @@ message PaginationListWhiteOrg {
   string componentId = 1;
   repeated PaginationListWhiteOrgItem items = 2;
   optional int32 limit = 3;
+  optional bool showDivider = 4;
 }
 
-message PaginationListWhiteOrgItem { 
+message PaginationListWhiteOrgItem {
   optional ua.gov.diia.types.ds.molecules.CardMlc cardMlc = 1;
   optional ua.gov.diia.types.ds.molecules.ListItemMlc listItemMlc = 2;
   optional ua.gov.diia.types.ds.atoms.GreyTitleAtm greyTitleAtm = 3;

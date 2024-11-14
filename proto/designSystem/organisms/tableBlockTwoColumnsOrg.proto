@@ -12,7 +12,8 @@ option java_package = "ua.gov.diia.types.ds.organisms";
  * @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1349583167/tableBlockTwoColumnsOrg
  */
 message TableBlockTwoColumnsOrg {
-    optional ua.gov.diia.types.ds.molecules.HeadingWithSubtitlesMlc headingWithSubtitlesMlc = 1;
-    optional string photo = 2;
-    repeated ua.gov.diia.types.ds.molecules.TableItemMlc items = 3;
+  optional ua.gov.diia.types.ds.molecules.HeadingWithSubtitlesMlc headingWithSubtitlesMlc = 1;
+  optional string photo = 2;
+  repeated ua.gov.diia.types.ds.molecules.TableItemMlc items = 3;
+  optional string componentId = 4;
 }

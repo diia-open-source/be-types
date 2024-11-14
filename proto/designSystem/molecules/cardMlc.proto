@@ -2,43 +2,42 @@ syntax = "proto3";
 
 package ua.gov.diia.types.ds.molecules;
 
-import "designSystem/icon.proto";
+import "designSystem/atoms/btnPrimaryAdditionalAtm.proto";
+import "designSystem/atoms/btnStrokeAdditionalAtm.proto";
 import "designSystem/atoms/buttonAction.proto";
+import "designSystem/atoms/chipStatusAtm.proto";
+import "designSystem/atoms/enums/tickerAtmType.proto";
+import "designSystem/atoms/tickerAtm.proto";
+import "designSystem/icon.proto";
 
 option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.molecules";
-
-import "designSystem/atoms/chipStatusAtm.proto";
-import "designSystem/atoms/tickerAtm.proto";
-import "designSystem/atoms/enums/tickerAtmType.proto";
-import "designSystem/atoms/btnPrimaryAdditionalAtm.proto";
-import "designSystem/atoms/btnStrokeAdditionalAtm.proto";
 
 /**
  * @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1358626824/cardMlc
  */
 message CardMlc {
-    string id = 1;
-    optional ua.gov.diia.types.ds.atoms.ChipStatusAtm chipStatusAtm = 2;
-    optional string label = 3;
-    string title = 4;
-    optional CardMlcSubtitle subtitle = 5;
-    optional string description = 6;
-    optional string botLabel = 7;
-    optional CardMlcTicker ticker = 8;
-    optional ua.gov.diia.types.ds.atoms.TickerAtm tickerAtm = 9;
-    optional ua.gov.diia.types.ds.atoms.BtnPrimaryAdditionalAtm btnPrimaryAdditionalAtm = 10;
-    optional ua.gov.diia.types.ds.atoms.BtnStrokeAdditionalAtm btnStrokeAdditionalAtm = 11;
-    optional string componentId = 12;
-    repeated CardMlcSubtitle subtitles = 13;
+  string id = 1;
+  optional ua.gov.diia.types.ds.atoms.ChipStatusAtm chipStatusAtm = 2;
+  optional string label = 3;
+  string title = 4;
+  optional CardMlcSubtitle subtitle = 5;
+  optional string description = 6;
+  optional string botLabel = 7;
+  optional CardMlcTicker ticker = 8;
+  optional ua.gov.diia.types.ds.atoms.TickerAtm tickerAtm = 9;
+  optional ua.gov.diia.types.ds.atoms.BtnPrimaryAdditionalAtm btnPrimaryAdditionalAtm = 10;
+  optional ua.gov.diia.types.ds.atoms.BtnStrokeAdditionalAtm btnStrokeAdditionalAtm = 11;
+  optional string componentId = 12;
+  repeated CardMlcSubtitle subtitles = 13;
 }
 
 message CardMlcSubtitle {
-    optional string icon = 1;
-    string value = 2;
+  optional string icon = 1;
+  string value = 2;
 }
 
 message CardMlcTicker {
-    string text = 1;
-    ua.gov.diia.types.ds.atoms.tickeratm.TickerAtmType type = 2;
+  string text = 1;
+  ua.gov.diia.types.ds.atoms.tickeratm.TickerAtmType type = 2;
 }

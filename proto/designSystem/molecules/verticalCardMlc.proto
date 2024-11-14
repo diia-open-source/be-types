@@ -2,15 +2,15 @@ syntax = "proto3";
 
 package ua.gov.diia.types.ds.molecules;
 
+import "designSystem/atoms/badgeCounterAtm.proto";
+
 option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.molecules";
 
-import "designSystem/atoms/badgeCounterAtm.proto";
-
 /**
-@see
-https://diia.atlassian.net/wiki/spaces/DIIA/pages/1371439310/verticalCardMlc
- */
+   @see
+   https://diia.atlassian.net/wiki/spaces/DIIA/pages/1371439310/verticalCardMlc
+*/
 message VerticalCardMlc {
   string image = 1;
   ua.gov.diia.types.ds.atoms.BadgeCounterAtm badgeCounterAtm = 2;

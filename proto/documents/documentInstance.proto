@@ -2,22 +2,23 @@ syntax = "proto3";
 
 package ua.gov.diia.types.documents;
 
-option java_multiple_files = true;
-option java_package = "ua.gov.diia.types.documents";
-
-import "google/protobuf/empty.proto";
+import "designSystem/atoms/chipStatusAtm.proto";
 import "designSystem/atoms/iconAtm.proto";
 import "designSystem/atoms/tickerAtm.proto";
-import "designSystem/atoms/chipStatusAtm.proto";
-import "designSystem/organisms/listItemGroupOrg.proto";
-import "designSystem/organisms/docHeadingOrg.proto";
-import "designSystem/organisms/tableBlockTwoColumnsPlaneOrg.proto";
+import "designSystem/molecules/listItemMlc.proto";
+import "designSystem/molecules/smallEmojiPanelMlc.proto";
+import "designSystem/molecules/subtitleLabelMlc.proto";
 import "designSystem/organisms/docButtonHeadingOrg.proto";
+import "designSystem/organisms/docHeadingOrg.proto";
+import "designSystem/organisms/listItemGroupOrg.proto";
+import "designSystem/organisms/tableBlockAccordionOrg.proto";
 import "designSystem/organisms/tableBlockPlaneOrg.proto";
 import "designSystem/organisms/tableBlockTwoColumnsOrg.proto";
-import "designSystem/molecules/subtitleLabelMlc.proto";
-import "designSystem/molecules/smallEmojiPanelMlc.proto";
-import "designSystem/molecules/listItemMlc.proto";
+import "designSystem/organisms/tableBlockTwoColumnsPlaneOrg.proto";
+import "google/protobuf/empty.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.documents";
 
 message DocumentFrontCard {
   repeated FrontCardItem UA = 1;
@@ -26,27 +27,23 @@ message DocumentFrontCard {
 
 message FrontCardItem {
   optional ua.gov.diia.types.ds.organisms.DocHeadingOrg docHeadingOrg = 1;
-  optional ua.gov.diia.types.ds.organisms.TableBlockTwoColumnsPlaneOrg
-      tableBlockTwoColumnsPlaneOrg = 2;
+  optional ua.gov.diia.types.ds.organisms.TableBlockTwoColumnsPlaneOrg tableBlockTwoColumnsPlaneOrg = 2;
   optional ua.gov.diia.types.ds.atoms.TickerAtm tickerAtm = 3;
-  optional ua.gov.diia.types.ds.organisms.DocButtonHeadingOrg
-      docButtonHeadingOrg = 4;
+  optional ua.gov.diia.types.ds.organisms.DocButtonHeadingOrg docButtonHeadingOrg = 4;
   optional ua.gov.diia.types.ds.molecules.SubtitleLabelMlc subtitleLabelMlc = 5;
-  optional ua.gov.diia.types.ds.organisms.TableBlockPlaneOrg
-      tableBlockPlaneOrg = 6;
+  optional ua.gov.diia.types.ds.organisms.TableBlockPlaneOrg tableBlockPlaneOrg = 6;
   optional ua.gov.diia.types.ds.atoms.ChipStatusAtm chipStatusAtm = 7;
-  optional ua.gov.diia.types.ds.molecules.SmallEmojiPanelMlc
-      smallEmojiPanelMlc = 8;
+  optional ua.gov.diia.types.ds.molecules.SmallEmojiPanelMlc smallEmojiPanelMlc = 8;
 }
 
 message DocumentFullInfoItem {
   optional ua.gov.diia.types.ds.organisms.DocHeadingOrg docHeadingOrg = 1;
   optional ua.gov.diia.types.ds.atoms.TickerAtm tickerAtm = 2;
-  optional ua.gov.diia.types.ds.organisms.TableBlockTwoColumnsOrg
-      tableBlockTwoColumnsOrg = 3;
+  optional ua.gov.diia.types.ds.organisms.TableBlockTwoColumnsOrg tableBlockTwoColumnsOrg = 3;
   optional ua.gov.diia.types.ds.organisms.TableBlockPlaneOrg tableBlockOrg = 4;
   optional ua.gov.diia.types.ds.organisms.ListItemGroupOrg listItemGroupOrg = 5;
   optional google.protobuf.Empty verificationCodesOrg = 6;
+  optional ua.gov.diia.types.ds.organisms.TableBlockAccordionOrg tableBlockAccordionOrg = 7;
 }
 
 message DocumentContentItem {

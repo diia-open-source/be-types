@@ -11,10 +11,10 @@ option java_package = "ua.gov.diia.types.ds.molecules";
  * @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1363574785/btnLoadIconPlainGroupMlc
  */
 message BtnLoadIconPlainGroupMlc {
-    optional string componentId = 1;
-    repeated BtnLoadIconPlainGroupMlcItem items = 2;
+  optional string componentId = 1;
+  repeated BtnLoadIconPlainGroupMlcItem items = 2;
 }
 
 message BtnLoadIconPlainGroupMlcItem {
-    ua.gov.diia.types.ds.atoms.BtnLoadPlainIconAtm btnLoadPlainIconAtm = 1;
+  ua.gov.diia.types.ds.atoms.BtnLoadPlainIconAtm btnLoadPlainIconAtm = 1;
 }

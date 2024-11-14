@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.organisms;
+
+import "designSystem/atoms/btnPlainAtm.proto";
+import "designSystem/atoms/btnPrimaryWideAtm.proto";
+import "designSystem/molecules/checkboxSquareMlc.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.organisms";
+
+/**
+ * @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1522598266/checkboxBtnWhiteOrg
+ */
+message CheckboxBtnWhiteOrg {
+  string componentId = 1;
+  optional string id = 2;
+  repeated CheckboxBtnWhiteOrgItem items = 3;
+  ua.gov.diia.types.ds.atoms.BtnPrimaryWideAtm btnPrimaryWideAtm = 4;
+  optional ua.gov.diia.types.ds.atoms.BtnPlainAtm btnPlainAtm = 5;
+}
+
+message CheckboxBtnWhiteOrgItem {
+  ua.gov.diia.types.ds.molecules.CheckboxSquareMlc checkboxSquareMlc = 1;
+}

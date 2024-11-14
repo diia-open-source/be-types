@@ -1,6 +1,6 @@
 {
     "name": "@diia-inhouse/types",
-    "version": "6.51.0",
+    "version": "6.92.0",
     "description": "Core types",
     "main": "dist/index.js",
     "types": "dist/types/index.d.ts",
@@ -11,15 +11,14 @@
         "dist"
     ],
     "engines": {
-        "node": ">=18"
+        "node": ">=20"
     },
     "scripts": {
         "prebuild": "rimraf dist",
         "build": "npm run genproto && npx tsc && cp -r proto dist/proto",
         "semantic-release": "semantic-release",
-        "start": "npm run build && node dist/index.js",
-        "lint": "eslint '*/**/*.{js,ts}' . && prettier --check .",
-        "lint-fix": "npx eslint '*/**/*.{js,ts}' --fix && npx prettier --write .",
+        "lint": "eslint --ext .ts . && prettier --check . && buf format ./proto --diff --exit-code ",
+        "lint-fix": "eslint --ext .ts --fix && prettier --write . && buf format ./proto --write",
         "lint:lockfile": "lockfile-lint --path package-lock.json --allowed-hosts registry.npmjs.org --validate-https",
         "prepare": "npm run build",
         "find-circulars": "npx madge --circular --extensions ts ./",
@@ -28,21 +27,25 @@
         "test:unit": "npm run test --selectProjects unit"
     },
     "dependencies": {
-        "@types/node": "20.10.0",
-        "bson": "6.2.0",
-        "glob": "10.3.10",
+        "@types/node": "22.9.0",
+        "bson": "6.9.0",
+        "glob": "11.0.0",
         "protobufjs": "7.2.5",
         "type-fest": "4.18.3"
     },
     "devDependencies": {
-        "@diia-inhouse/configs": "1.31.1",
-        "@diia-inhouse/eslint-config": "5.1.0",
-        "@diia-inhouse/genproto": "1.14.0",
-        "rimraf": "5.0.5",
-        "lockfile-lint": "4.13.1"
+        "@bufbuild/buf": "1.46.0",
+        "@diia-inhouse/configs": "4.0.0",
+        "@diia-inhouse/eslint-config": "5.6.5",
+        "@diia-inhouse/genproto": "2.0.8",
+        "lockfile-lint": "4.14.0",
+        "rimraf": "6.0.1",
+        "semantic-release": "24.2.0",
+        "ts-proto": "1.181.1",
+        "typescript": "5.6.3"
     },
     "resolutions": {
-        "@babel/traverse": "7.23.2"
+        "@babel/traverse": "7.25.9"
     },
     "release": {
         "extends": "@diia-inhouse/configs/dist/semantic-release/package",

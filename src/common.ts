@@ -5,6 +5,7 @@ import { ActionSession, SessionType } from './session'
 export enum IdentifierPrefix {
     EResident = 'e-resident',
     EResidentApplicant = 'e-resident-applicant',
+    IdentDoc = 'identdoc.',
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -17,6 +18,7 @@ export interface AlsData {
 }
 
 export interface ActHeaders {
+    [key: string]: string | undefined
     actionVersion: ActionVersion
     traceId: string
 
@@ -26,7 +28,6 @@ export interface ActHeaders {
     appVersion?: string
     platformVersion?: string
     serviceCode?: string
-    [key: string]: string | undefined
 }
 
 export interface ActArguments {

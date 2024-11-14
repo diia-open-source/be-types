@@ -8,12 +8,12 @@ option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.molecules";
 
 /**
- *  @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1372028929/tableItemPrimaryMlc 
+ *  @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1372028929/tableItemPrimaryMlc
  */
 
 message TableItemPrimaryMlc {
-    optional string label = 1;
-    string value = 2;
-    optional ua.gov.diia.types.ds.atoms.IconAtm icon = 3;
-    optional string componentId = 4;
+  optional string label = 1;
+  string value = 2;
+  optional ua.gov.diia.types.ds.atoms.IconAtm icon = 3;
+  optional string componentId = 4;
 }

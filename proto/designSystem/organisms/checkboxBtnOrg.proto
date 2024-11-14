@@ -2,9 +2,9 @@ syntax = "proto3";
 
 package ua.gov.diia.types.ds.organisms;
 
-import "designSystem/molecules/checkboxSquareMlc.proto";
 import "designSystem/atoms/btnPrimaryDefaultAtm.proto";
 import "designSystem/atoms/btnPrimaryWideAtm.proto";
+import "designSystem/molecules/checkboxSquareMlc.proto";
 
 option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.organisms";

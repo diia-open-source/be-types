@@ -6,8 +6,8 @@ option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.molecules";
 
 /**
-@see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1434288129/chipTimeMlc
- */
+ @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1434288129/chipTimeMlc
+*/
 message ChipTimeMlc {
   reserved 4;
   reserved "data";

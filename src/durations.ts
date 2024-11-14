@@ -1,4 +1,4 @@
-export const enum DurationS {
+export enum DurationS {
     Second = 1,
     Minute = 60,
     Hour = 60 * Minute,
@@ -6,7 +6,7 @@ export const enum DurationS {
     Month = 30 * Day,
 }
 
-export const enum DurationMs {
+export enum DurationMs {
     Second = 1000,
     Minute = 60 * Second,
     Hour = 60 * Minute,

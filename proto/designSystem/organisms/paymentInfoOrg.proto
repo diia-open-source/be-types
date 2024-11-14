@@ -2,10 +2,10 @@ syntax = "proto3";
 
 package ua.gov.diia.types.ds.organisms;
 
+import "designSystem/molecules/tableItemHorizontalLargeMlc.proto";
+import "designSystem/molecules/tableItemHorizontalMlc.proto";
 import "designSystem/molecules/tableMainHeadingMlc.proto";
 import "designSystem/molecules/tableSecondaryHeadingMlc.proto";
-import "designSystem/molecules/tableItemHorizontalMlc.proto";
-import "designSystem/molecules/tableItemHorizontalLargeMlc.proto";
 
 option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.organisms";

@@ -2,12 +2,12 @@ syntax = "proto3";
 
 package ua.gov.diia.types.ds.organisms;
 
+import "designSystem/molecules/btnLoadIconPlainGroupMlc.proto";
+import "designSystem/molecules/qrCodeMlc.proto";
+import "designSystem/molecules/stubMessageMlc.proto";
+
 option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.organisms";
-
-import "designSystem/molecules/qrCodeMlc.proto";
-import "designSystem/molecules/btnLoadIconPlainGroupMlc.proto";
-import "designSystem/molecules/stubMessageMlc.proto";
 
 /**
  * @see

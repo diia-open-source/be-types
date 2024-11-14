@@ -2,17 +2,17 @@ syntax = "proto3";
 
 package ua.gov.diia.types.ds.organisms;
 
-option java_multiple_files = true;
-option java_package = "ua.gov.diia.types.ds.organisms";
-
 import "designSystem/atoms/dotNavigationAtm.proto";
 import "designSystem/molecules/halvedCardMlc.proto";
 import "designSystem/molecules/iconCardMlc.proto";
 
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.organisms";
+
 /**
-@see
-https://diia.atlassian.net/wiki/spaces/DIIA/pages/1358889026/halvedCardCarouselOrg
- */
+   @see
+   https://diia.atlassian.net/wiki/spaces/DIIA/pages/1358889026/halvedCardCarouselOrg
+*/
 message HalvedCardCarouselOrg {
   ua.gov.diia.types.ds.atoms.DotNavigationAtm dotNavigationAtm = 1;
   repeated HalvedCardCarouselItem items = 2;

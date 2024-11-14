@@ -11,7 +11,7 @@ option java_package = "ua.gov.diia.types.ds.organisms";
  * @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1358758028/listItemGroupOrg
  */
 message ListItemGroupOrg {
-    optional string title = 1;
-    repeated ua.gov.diia.types.ds.molecules.ListItemMlc items = 2;
-    optional string componentId = 3;
+  optional string title = 1;
+  repeated ua.gov.diia.types.ds.molecules.ListItemMlc items = 2;
+  optional string componentId = 3;
 }

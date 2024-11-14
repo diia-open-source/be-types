@@ -15,5 +15,7 @@ message InputNumberLargeMlc {
   optional string componentId = 1;
   repeated Item items = 2;
 
-  message Item { ua.gov.diia.types.ds.atoms.InputNumberLargeAtm inputNumberLargeAtm = 1; }
+  message Item {
+    ua.gov.diia.types.ds.atoms.InputNumberLargeAtm inputNumberLargeAtm = 1;
+  }
 }

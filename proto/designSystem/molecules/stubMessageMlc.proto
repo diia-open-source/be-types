@@ -2,8 +2,8 @@ syntax = "proto3";
 
 package ua.gov.diia.types.ds.molecules;
 
-import "designSystem/atoms/textParameterAtm.proto";
 import "designSystem/atoms/btnStrokeAdditionalAtm.proto";
+import "designSystem/atoms/textParameterAtm.proto";
 
 option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.molecules";

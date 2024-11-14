@@ -30,6 +30,4 @@ extend google.protobuf.MethodOptions {
   HttpRule http = 72295728;
 }
 
-message Stub {
-
-}
+message Stub {}

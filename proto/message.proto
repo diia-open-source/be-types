@@ -2,15 +2,13 @@ syntax = "proto3";
 
 package ua.gov.diia.types.messages;
 
-import "ui.proto";
 import "designSystem/atoms/articlePicAtm.proto";
 import "designSystem/atoms/textParameterAtm.proto";
-
 import "designSystem/molecules/articleVideoMlc.proto";
 import "designSystem/molecules/textLabelContainerMlc.proto";
-
-import "designSystem/organisms/listItemGroupOrg.proto";
 import "designSystem/organisms/bottomGroupOrg.proto";
+import "designSystem/organisms/listItemGroupOrg.proto";
+import "ui.proto";
 
 option java_multiple_files = true;
 option java_package = "ua.gov.diia.types";
@@ -84,8 +82,7 @@ message TextContainer {
 }
 
 message MessageBodyItemV2 {
-  optional ua.gov.diia.types.ds.molecules.TextLabelContainerMlc
-      textLabelContainerMlc = 1;
+  optional ua.gov.diia.types.ds.molecules.TextLabelContainerMlc textLabelContainerMlc = 1;
   optional ua.gov.diia.types.ds.atoms.ArticlePicAtm articlePicAtm = 2;
   optional ua.gov.diia.types.ds.molecules.ArticleVideoMlc articleVideoMlc = 3;
   optional ua.gov.diia.types.ds.organisms.ListItemGroupOrg listItemGroupOrg = 4;

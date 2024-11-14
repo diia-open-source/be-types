@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.molecules;
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.molecules";
+
+/**
+ * @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1571225601/smallCheckIconMlc
+ */
+message SmallCheckIconMlc {
+  string componentId = 1;
+  optional string code = 2;
+  string icon = 3;
+  string label = 4;
+  optional string state = 5;
+}

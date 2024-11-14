@@ -8,9 +8,9 @@ option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.organisms";
 
 /**
-@see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1343651864/chipTabsOrg
-@partof designSystem/organisms/topGroupOrg.proto
- */
+ @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1343651864/chipTabsOrg
+ @partof designSystem/organisms/topGroupOrg.proto
+*/
 message ChipTabsOrg {
   optional string label = 1;
   repeated ChipTabsOrgItem items = 2;
@@ -19,8 +19,8 @@ message ChipTabsOrg {
 }
 
 message ChipTabsOrgItem {
-  optional string code = 1;  /* @deprecated use chipMlc */
-  optional string label = 2;  /* @deprecated use chipMlc */
-  optional int32 count = 3;  /* @deprecated use chipMlc */
+  optional string code = 1; /* @deprecated use chipMlc */
+  optional string label = 2; /* @deprecated use chipMlc */
+  optional int32 count = 3; /* @deprecated use chipMlc */
   ua.gov.diia.types.ds.molecules.ChipMlc chipMlc = 4;
 }

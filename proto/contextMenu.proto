@@ -1,14 +1,14 @@
 syntax = "proto3";
 
 package ua.gov.diia.types.contextmenu;
-import "version.proto";
-import "publicServiceStatus.proto";
+
 import "profileFeature.proto";
+import "publicServiceStatus.proto";
 import "session/sessionType.proto";
+import "version.proto";
 
 option java_multiple_files = true;
 option java_package = "ua.gov.diia.types";
-
 
 enum PublicServiceContextMenuType {
   faqCategory = 0;
@@ -34,7 +34,7 @@ message PublicServiceContextMenu {
 
 message PublicServiceSettings {
   string id = 1;
-  repeated string categories =2;
+  repeated string categories = 2;
   string code = 3;
   string name = 4;
   PublicServiceStatus status = 5;

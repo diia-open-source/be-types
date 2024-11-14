@@ -17,4 +17,5 @@ message CheckboxRoundMlc {
   optional string description = 2;
   optional string status = 3;
   optional ua.gov.diia.types.ds.atoms.checkable.CheckableAtmType state = 4;
+  optional string componentId = 6;
 }

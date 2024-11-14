@@ -2,8 +2,8 @@ syntax = "proto3";
 
 package ua.gov.diia.types.ds.organisms;
 
-import "designSystem/atoms/btnPrimaryDefaultAtm.proto";
 import "designSystem/atoms/btnPlainAtm.proto";
+import "designSystem/atoms/btnPrimaryDefaultAtm.proto";
 import "designSystem/atoms/playerBtnAtm.proto";
 
 option java_multiple_files = true;
@@ -13,8 +13,8 @@ option java_package = "ua.gov.diia.types.ds.organisms";
  * @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1367900259/fullScreenVideoOrg
  */
 message FullScreenVideoOrg {
-    string source = 1;
-    optional ua.gov.diia.types.ds.atoms.BtnPrimaryDefaultAtm btnPrimaryDefaultAtm = 2;
-    optional ua.gov.diia.types.ds.atoms.BtnPlainAtm btnPlainAtm = 3;
-    optional ua.gov.diia.types.ds.atoms.PlayerBtnAtm playerBtnAtm = 4;
+  string source = 1;
+  optional ua.gov.diia.types.ds.atoms.BtnPrimaryDefaultAtm btnPrimaryDefaultAtm = 2;
+  optional ua.gov.diia.types.ds.atoms.BtnPlainAtm btnPlainAtm = 3;
+  optional ua.gov.diia.types.ds.atoms.PlayerBtnAtm playerBtnAtm = 4;
 }

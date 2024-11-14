@@ -8,9 +8,9 @@ option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.molecules";
 
 /**
-@see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1370783745/smallEmojiPanelPlaneMlc
- */
+ @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1370783745/smallEmojiPanelPlaneMlc
+*/
 message SmallEmojiPanelPlaneMlc {
-    string label = 1;
-    ua.gov.diia.types.ds.atoms.IconAtm icon = 2;
+  string label = 1;
+  ua.gov.diia.types.ds.atoms.IconAtm icon = 2;
 }

@@ -2,10 +2,10 @@ syntax = "proto3";
 
 package ua.gov.diia.types.ds.organisms;
 
-import "designSystem/organisms/toggleButtonGroupOrg.proto";
-import "designSystem/molecules/qrCodeMlc.proto";
 import "designSystem/molecules/barCodeMlc.proto";
+import "designSystem/molecules/qrCodeMlc.proto";
 import "designSystem/molecules/stubMessageMlc.proto";
+import "designSystem/organisms/toggleButtonGroupOrg.proto";
 
 option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.organisms";
@@ -30,7 +30,6 @@ message VerificationCode {
   optional ExpireLabel expireLabel = 1;
   ua.gov.diia.types.ds.molecules.QrCodeMlc qrCodeMlc = 2;
   optional ua.gov.diia.types.ds.molecules.BarCodeMlc barCodeMlc = 3;
-  optional ua.gov.diia.types.ds.organisms.ToggleButtonGroupOrg
-      toggleButtonGroupOrg = 4;
+  optional ua.gov.diia.types.ds.organisms.ToggleButtonGroupOrg toggleButtonGroupOrg = 4;
   ua.gov.diia.types.ds.molecules.StubMessageMlc stubMessageMlc = 5;
 }

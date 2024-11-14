@@ -4,7 +4,6 @@ package ua.gov.diia.types;
 
 import "designSystem/atoms/enums/buttonStateAtmType.proto";
 import "designSystem/atoms/enums/contentTypeAtm.proto";
-
 import "designSystem/molecules/navigationPanelMlc.proto";
 
 option java_multiple_files = true;
@@ -66,59 +65,59 @@ message HintedLabel {
 }
 
 message ItemListView {
-    string title = 1;
-    repeated ListItem items = 2;
+  string title = 1;
+  repeated ListItem items = 2;
 }
 
 message ListItem {
-    string logoLeft = 1;
-    string iconLeft = 2;
-    string iconRight = 3;
-    string label = 4;
-    string description = 5;
-    Action action = 6;
-    string link = 7;
-    ua.gov.diia.types.ds.atoms.button.ButtonState state = 8;
-    string id = 9;
+  string logoLeft = 1;
+  string iconLeft = 2;
+  string iconRight = 3;
+  string label = 4;
+  string description = 5;
+  Action action = 6;
+  string link = 7;
+  ua.gov.diia.types.ds.atoms.button.ButtonState state = 8;
+  string id = 9;
 }
 
 message Action {
-    string type = 1;
-    string subtype = 2;
-    string resource = 3;
+  string type = 1;
+  string subtype = 2;
+  string resource = 3;
 }
 
 message DefaultButton {
-    string label = 1;
-    ua.gov.diia.types.ds.atoms.button.ButtonState state = 2;
-    Action action = 3;
+  string label = 1;
+  ua.gov.diia.types.ds.atoms.button.ButtonState state = 2;
+  Action action = 3;
 }
 
 message BottomGroup {
-    DefaultButton primaryDefaultButton = 1;
+  DefaultButton primaryDefaultButton = 1;
 }
 
 message TopGroup {
-    ua.gov.diia.types.ds.molecules.NavigationPanelMlc navigationBarMlcl = 1;
+  ua.gov.diia.types.ds.molecules.NavigationPanelMlc navigationBarMlcl = 1;
 }
 
 message ContentGroupMlcl {
-    TableBlockMlcl tableBlockMlcl = 1;
+  TableBlockMlcl tableBlockMlcl = 1;
 }
 
 message TableBlockMlcl {
-    TableHeadingMain tableHeadingMain = 1;
-    repeated TableBlockMlclItem items = 2;
+  TableHeadingMain tableHeadingMain = 1;
+  repeated TableBlockMlclItem items = 2;
 }
 
 message TableHeadingMain {
-    string label = 1;
+  string label = 1;
 }
 
 message TableBlockMlclItem {
-    LabeledValue tableItemMlcPrimary = 1;
-    LabeledValue tableItemMlcHorizontal = 2;
-    LabeledValue tableItemMlcVertical = 3;
+  LabeledValue tableItemMlcPrimary = 1;
+  LabeledValue tableItemMlcHorizontal = 2;
+  LabeledValue tableItemMlcVertical = 3;
 }
 
 message SearchInputAtm {

@@ -13,27 +13,22 @@ export enum LogLevel {
     IO = 'io',
 }
 
-export interface TrimmerOptions {
-    maxArrayLength: number
-    maxStringLength: number
-    maxObjectDepth: number
-    maxObjectBreadth: number
-    redact: {
-        fields?: Set<string>
-        paths?: Set<string>
-        fieldsToRedactFullname?: Set<string>
-    }
-    endLengthToLog: number
-}
-
-export interface LoggerOptions extends TrimmerOptions {
+export interface LoggerOptions {
     logLevel?: LogLevel
+    maxArrayLength?: number
+    maxStringLength?: number
+    endLengthToLog?: number
+    maxObjectDepth?: number
+    maxObjectBreadth?: number
+    redact?: {
+        fields?: string[]
+        paths?: string[]
+        fieldsToRedactFullname?: string[]
+    }
 }
-
-export type LoggerConfig = Partial<LoggerOptions>
 
 export interface LoggerConstructor {
-    new (conig?: LoggerConfig, asyncLocalStorage?: AsyncLocalStorage<AlsData>): Logger
+    new (options?: LoggerOptions, asyncLocalStorage?: AsyncLocalStorage<AlsData>): Logger
 }
 
 export interface Logger {

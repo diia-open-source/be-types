@@ -6,8 +6,8 @@ option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.atoms";
 
 /**
-@see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1370849283/dotNavigationAtm
- */
+ @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1370849283/dotNavigationAtm
+*/
 message DotNavigationAtm {
-    int32 count = 1;
+  int32 count = 1;
 }

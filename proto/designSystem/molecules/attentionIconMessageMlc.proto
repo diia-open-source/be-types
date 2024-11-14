@@ -1,4 +1,3 @@
-
 syntax = "proto3";
 
 package ua.gov.diia.types.ds.molecules;
@@ -9,9 +8,9 @@ option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.molecules";
 
 /**
-@see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1524105320/attentionIconMessageMlc
- */
- enum BackgroundMode {
+ @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1524105320/attentionIconMessageMlc
+*/
+enum BackgroundMode {
   info = 0;
 }
 
@@ -19,4 +18,5 @@ message AttentionIconMessageMlc {
   optional ua.gov.diia.types.ds.atoms.SmallIconAtm smallIconAtm = 1;
   string text = 2;
   BackgroundMode backgroundMode = 3;
+  optional string componentId = 4;
 }

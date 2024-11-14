@@ -28,5 +28,4 @@ message CheckboxSquareMlcOption {
 
   string id = 1;
   bool isSelected = 4;
-
 }

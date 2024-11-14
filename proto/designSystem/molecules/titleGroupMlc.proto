@@ -2,20 +2,21 @@ syntax = "proto3";
 
 package ua.gov.diia.types.ds.molecules;
 
+import "designSystem/atoms/iconAction.proto";
+import "designSystem/icon.proto";
+
 option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.molecules";
 
-import "designSystem/icon.proto";
-import "designSystem/atoms/iconAction.proto";
-
 /**
-@see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1322713098/titleGroupMlc
- */
+ @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1322713098/titleGroupMlc
+*/
 message TitleGroupMlc {
   string heroText = 1;
   optional string label = 2;
   optional TitleGroupMediumIconRight mediumIconRight = 3;
   optional LeftNavIcon leftNavIcon = 4;
+  optional string componentId = 5;
 }
 
 message TitleGroupMediumIconRight {

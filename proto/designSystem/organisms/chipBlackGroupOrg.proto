@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.organisms;
+
+import "designSystem/molecules/chipBlackMlc.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.organisms";
+
+/**
+ @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1581809701/chipBlackGroupOrg
+*/
+message ChipBlackGroupOrg {
+  optional string componentId = 1;
+  optional string id = 2;
+  optional string inputCode = 3;
+  optional bool mandatory = 4;
+  optional string label = 5;
+  optional int32 minCount = 6;
+  optional int32 maxCount = 7;
+  repeated ChipBlackGroupOrgItem items = 8;
+  repeated string preselectedCodes = 9;
+}
+
+message ChipBlackGroupOrgItem {
+  optional ua.gov.diia.types.ds.molecules.ChipBlackMlc chipBlackMlc = 1;
+}

@@ -2,14 +2,14 @@ syntax = "proto3";
 
 package ua.gov.diia.types.ds.molecules;
 
+import "designSystem/icon.proto";
+
 option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.molecules";
 
-import "designSystem/icon.proto";
-
 /**
-@see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1358954532/imageCardMlc
- */
+ @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1358954532/imageCardMlc
+*/
 message ImageCardMlc {
   string image = 1;
   string label = 2;

@@ -9,8 +9,8 @@ option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.organisms";
 
 /**
-@see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1434222595/calendarItemOrg
- */
+ @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1434222595/calendarItemOrg
+*/
 message CalendarItemOrg {
   string componentId = 1;
   string date = 2;

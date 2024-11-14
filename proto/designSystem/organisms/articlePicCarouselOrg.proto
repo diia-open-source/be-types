@@ -2,12 +2,12 @@ syntax = "proto3";
 
 package ua.gov.diia.types.ds.organisms;
 
+import "designSystem/atoms/articlePicAtm.proto";
+import "designSystem/atoms/dotNavigationAtm.proto";
+import "designSystem/molecules/articleVideoMlc.proto";
+
 option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.organisms";
-
-import "designSystem/atoms/dotNavigationAtm.proto";
-import "designSystem/atoms/articlePicAtm.proto";
-import "designSystem/molecules/articleVideoMlc.proto";
 
 /**
  * @see

@@ -2,10 +2,10 @@ syntax = "proto3";
 
 package ua.gov.diia.types.documents;
 
+import "google/protobuf/timestamp.proto";
+
 option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.documents";
-
-import "google/protobuf/timestamp.proto";
 
 enum OwnerType {
   owner = 0;

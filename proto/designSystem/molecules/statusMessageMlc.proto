@@ -8,8 +8,8 @@ option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.molecules";
 
 /**
-@see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1315602512/statusMessageMlc
- */
+ @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1315602512/statusMessageMlc
+*/
 message StatusMessageMlc {
   string icon = 1;
   string title = 2;

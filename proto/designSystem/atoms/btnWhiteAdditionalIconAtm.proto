@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.atoms;
+
+import "designSystem/atoms/badgeCounterAtm.proto";
+import "designSystem/atoms/buttonAction.proto";
+import "designSystem/atoms/enums/buttonStateAtmType.proto";
+import "designSystem/icon.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.atoms";
+
+/**
+ * @see
+ * https://diia.atlassian.net/wiki/spaces/DIIA/pages/1315602547/button#btnWhiteAdditionalIconAtm
+ */
+message BtnWhiteAdditionalIconAtm {
+  string componentId = 1;
+  optional string label = 2;
+  ua.gov.diia.types.ds.icon.Icon icon = 3;
+  optional ua.gov.diia.types.ds.atoms.button.ButtonState state = 4;
+  optional ua.gov.diia.types.ds.atoms.BadgeCounterAtm badgeCounterAtm = 5;
+  optional ua.gov.diia.types.ds.atoms.button.ButtonAction action = 6;
+}

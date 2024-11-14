@@ -9,5 +9,5 @@ option java_package = "ua.gov.diia.types.ds.atoms";
  * @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1372160001/badgeCounterAtm
  */
 message BadgeCounterAtm {
-    int32 count = 1;
+  int32 count = 1;
 }

@@ -9,8 +9,8 @@ option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.organisms";
 
 /**
-@see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1426653237/chipGroupOrg
- */
+ @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1426653237/chipGroupOrg
+*/
 message ChipGroupOrg {
   optional string componentId = 1;
   optional string label = 2;
@@ -19,6 +19,6 @@ message ChipGroupOrg {
 }
 
 message ChipGroupOrgItem {
-    optional ua.gov.diia.types.ds.molecules.ChipMlc chipMlc = 1;
-    optional ua.gov.diia.types.ds.molecules.ChipTimeMlc chipTimeMlc = 2;
+  optional ua.gov.diia.types.ds.molecules.ChipMlc chipMlc = 1;
+  optional ua.gov.diia.types.ds.molecules.ChipTimeMlc chipTimeMlc = 2;
 }

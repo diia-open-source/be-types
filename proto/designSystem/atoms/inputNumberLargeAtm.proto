@@ -8,8 +8,8 @@ option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.atoms";
 
 /**
-@see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1363640321/inputNumberLargeAtm
- */
+ @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1363640321/inputNumberLargeAtm
+*/
 message InputNumberLargeAtm {
   optional string componentId = 1;
   string placeholder = 2;

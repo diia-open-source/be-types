@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.molecules;
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.molecules";
+
+/**
+ @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1581449346/chipBlackMlc
+*/
+message ChipBlackMlc {
+  optional string componentId = 1;
+  string label = 2;
+  string code = 3;
+  optional bool active = 4;
+}

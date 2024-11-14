@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.ds.organisms;
+
+import "designSystem/atoms/btnPlainIconAtm.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.ds.organisms";
+
+/**
+ * @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1669332994/listItemEditGroupOrg
+ */
+message ListItemEditGroupOrg {
+  message Item {
+    string label = 1;
+    string value = 2;
+  }
+
+  optional string componentId = 1;
+  optional string title = 2;
+  optional string description = 3;
+  repeated Item items = 4;
+  optional ua.gov.diia.types.ds.atoms.BtnPlainIconAtm btnPlainIconAtm = 5;
+  string inputCode = 6;
+}

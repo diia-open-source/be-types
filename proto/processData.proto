@@ -1,11 +1,16 @@
 syntax = "proto3";
 
 package ua.gov.diia.types;
+
 option java_multiple_files = true;
 option java_package = "ua.gov.diia.types";
-
 
 message ProcessDataParams {
   map<string, string> templateParams = 1;
   optional string resource = 2;
+}
+
+message ProcessCodeResponse {
+  int32 processCode = 1;
+  optional ProcessDataParams opProcessDataParams = 2;
 }

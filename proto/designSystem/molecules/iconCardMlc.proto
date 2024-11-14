@@ -9,8 +9,8 @@ option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.molecules";
 
 /**
-@see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1358725228/iconCardMlc
- */
+ @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1358725228/iconCardMlc
+*/
 message IconCardMlc {
   string label = 1;
   ua.gov.diia.types.ds.icon.Icon iconLeft = 2;

@@ -6,9 +6,9 @@ option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.atoms.checkable";
 
 /**
-@partof designSystem/molecules/checkboxSquareMlc.proto
-@partof designSystem/molecules/radioBtnMlc.proto
- */
+ @partof designSystem/molecules/checkboxSquareMlc.proto
+ @partof designSystem/molecules/radioBtnMlc.proto
+*/
 enum CheckableAtmType {
   selected = 0;
   rest = 1;

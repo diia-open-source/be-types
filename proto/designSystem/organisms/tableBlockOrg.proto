@@ -2,9 +2,9 @@ syntax = "proto3";
 
 package ua.gov.diia.types.ds.organisms;
 
+import "designSystem/molecules/tableItemMlc.proto";
 import "designSystem/molecules/tableMainHeadingMlc.proto";
 import "designSystem/molecules/tableSecondaryHeadingMlc.proto";
-import "designSystem/molecules/tableItemMlc.proto";
 
 option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.organisms";
@@ -13,8 +13,8 @@ option java_package = "ua.gov.diia.types.ds.organisms";
  * @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1349353592/tableBlockOrg
  */
 message TableBlockOrg {
-    optional ua.gov.diia.types.ds.molecules.TableMainHeadingMlc tableMainHeadingMlc = 1;
-    optional ua.gov.diia.types.ds.molecules.TableSecondaryHeadingMlc tableSecondaryHeadingMlc = 2;
-    repeated ua.gov.diia.types.ds.molecules.TableItemMlc items = 3;
-    optional string componentId = 4;
+  optional ua.gov.diia.types.ds.molecules.TableMainHeadingMlc tableMainHeadingMlc = 1;
+  optional ua.gov.diia.types.ds.molecules.TableSecondaryHeadingMlc tableSecondaryHeadingMlc = 2;
+  repeated ua.gov.diia.types.ds.molecules.TableItemMlc items = 3;
+  optional string componentId = 4;
 }

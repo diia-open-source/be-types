@@ -12,7 +12,9 @@ option java_package = "ua.gov.diia.types.ds.molecules";
  * https://diia.atlassian.net/wiki/spaces/DIIA/pages/1552613387/searchInputMlc
  */
 message SearchInputMlc {
-  message Icon { ua.gov.diia.types.ds.icon.Icon code = 1; }
+  message Icon {
+    ua.gov.diia.types.ds.icon.Icon code = 1;
+  }
 
   string componentId = 1;
   string label = 2;

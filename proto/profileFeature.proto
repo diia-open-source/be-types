@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-import "google/protobuf/timestamp.proto";
-
 package ua.gov.diia.types.profilefeatures;
+
+import "google/protobuf/timestamp.proto";
 
 option java_multiple_files = true;
 option java_package = "ua.gov.diia.types";
@@ -30,8 +30,9 @@ enum ProfileFeature {
   office = 0;
   reserved 1;
   student = 2;
+  documents = 3;
 }
 
 message UserFeatures {
-    optional DiiaOfficeProfileData office = 1;
+  optional DiiaOfficeProfileData office = 1;
 }

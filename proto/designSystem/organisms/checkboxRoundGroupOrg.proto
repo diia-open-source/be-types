@@ -2,8 +2,8 @@ syntax = "proto3";
 
 package ua.gov.diia.types.ds.organisms;
 
-import "designSystem/molecules/checkboxRoundMlc.proto";
 import "designSystem/molecules/checkIconMlc.proto";
+import "designSystem/molecules/checkboxRoundMlc.proto";
 
 option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.organisms";
@@ -15,6 +15,9 @@ message CheckboxRoundGroupOrg {
   optional string id = 1;
   optional string title = 2;
   optional bool blocker = 5;
+  optional bool mandatory = 6;
+  optional string componentId = 7;
+  optional string inputCode = 8;
   optional string condition = 3;
   repeated CheckboxRoundGroupOrgItem items = 4;
 }

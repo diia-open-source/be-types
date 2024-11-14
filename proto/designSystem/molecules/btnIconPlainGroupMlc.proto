@@ -13,10 +13,10 @@ option java_package = "ua.gov.diia.types.ds.molecules";
  * @deprecated renamed to BtnLoadIconPlainGroupMlc
  */
 message BtnIconPlainGroupMlc {
-    optional string componentId = 1;
-    repeated BtnIconPlainGroupMlcItem items = 2;
+  optional string componentId = 1;
+  repeated BtnIconPlainGroupMlcItem items = 2;
 }
 
 message BtnIconPlainGroupMlcItem {
-    ua.gov.diia.types.ds.atoms.BtnPlainIconAtm btnPlainIconAtm = 1;
+  ua.gov.diia.types.ds.atoms.BtnPlainIconAtm btnPlainIconAtm = 1;
 }

@@ -1,4 +1,3 @@
-
 syntax = "proto3";
 
 package ua.gov.diia.types.ds.atoms;
@@ -10,20 +9,26 @@ option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.ds.atoms";
 
 enum TickerAtmUsage {
-    document = 0;
-    stackedCard = 1;
+  document = 0;
+  stackedCard = 1;
+  bodyOrg = 2;
+  grand = 3;
+  base = 4;
 }
 
 message TickerAtmAction {
-    ua.gov.diia.types.ds.atoms.iconatm.IconAtmActionType type = 1;
-    optional string subtype = 2;
-    optional string resource = 3;
+  ua.gov.diia.types.ds.atoms.iconatm.IconAtmActionType type = 1;
+  optional string subtype = 2;
+  optional string resource = 3;
 }
 
+/**
+ * @see https://diia.atlassian.net/wiki/spaces/DIIA/pages/1323499568/tickerAtm
+ */
 message TickerAtm {
-    TickerAtmUsage usage = 1;
-    ua.gov.diia.types.ds.atoms.tickeratm.TickerAtmType type = 2;
-    string value = 3;
-    optional TickerAtmAction action = 4;
-    optional string componentId = 5;
+  TickerAtmUsage usage = 1;
+  ua.gov.diia.types.ds.atoms.tickeratm.TickerAtmType type = 2;
+  string value = 3;
+  optional TickerAtmAction action = 4;
+  optional string componentId = 5;
 }
