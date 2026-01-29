@@ -24,6 +24,7 @@ export interface LoggerOptions {
         fields?: string[]
         paths?: string[]
         fieldsToRedactFullname?: string[]
+        fieldsToRedactItn?: string[]
     }
 }
 

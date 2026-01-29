@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package ua.gov.diia.types.session;
+
+import "google/protobuf/struct.proto";
+import "profileFeature.proto";
+import "session/sessionType.proto";
+import "token/tokenData.proto";
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types.session";
+
+message Session {
+  ua.gov.diia.types.session.SessionType sessionType = 1;
+
+  optional google.protobuf.Struct user = 2;
+  optional ua.gov.diia.types.profilefeatures.UserFeatures features = 3;
+  optional ua.gov.diia.types.token.AcquirerTokenDataMsg acquirer = 4;
+  optional ua.gov.diia.types.token.PartnerTokenDataMsg partner = 5;
+  optional ua.gov.diia.types.token.TemporaryTokenDataMsg temporary = 6;
+  optional ua.gov.diia.types.token.ServiceEntranceTokenDataMsg entrance = 7;
+  optional ua.gov.diia.types.token.ServiceUserTokenDataMsg serviceUser = 8;
+}

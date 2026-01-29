@@ -1,3 +1,6 @@
+/**
+ * @deprecated Use action's name instead if needed
+ */
 export enum ActionVersion {
     V0 = 'v0',
     V1 = 'v1',

@@ -1,33 +1,27 @@
-import { OwnerType } from '../generated/documents/documentData'
-
+import { DocumentBaseData, OwnerType } from '../generated/documents/documentData'
 import { DocStatus } from './docStatus'
-import { DocumentTicker } from './ticker'
 
-export interface DocumentCommon<T = string> {
+export interface BaseDocument {
+    baseData: DocumentBaseData
+
+    /** @deprecated */
     id: string
+    /** @deprecated */
     docNumber: string
+    /** @deprecated */
     docStatus: DocStatus
-    subtype?: T
-    issueDate?: Date
-    expirationDate?: Date
-    ownerType?: OwnerType
-    fullNameHash?: string
-}
-
-/** @deprecated used for old document models. Use DocumentCommon  */
-export interface DocumentMetaData {
-    docStatus: DocStatus
-    docNumber: string
+    /** @deprecated */
     docSubtype?: string
-    ownerType?: OwnerType
+    /** @deprecated */
+    subtype?: string
+    /** mixed format @deprecated */
+    issueDate?: string
+    /** mixed format @deprecated */
+    expirationDate?: string
+    /** @deprecated */
     registrationDate?: Date
-    expirationDate?: string
-    tickerOptions?: DocumentTicker
+    /** @deprecated */
+    ownerType?: OwnerType
+    /** @deprecated */
     fullNameHash?: string
-}
-
-export interface DocumentsMetaData {
-    currentDate?: string
-    expirationDate?: string
-    eTag?: string
 }

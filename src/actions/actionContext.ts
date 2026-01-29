@@ -1,8 +1,8 @@
-import { BaseSession } from '../session'
+import { BaseSession, NoneSession } from '../session'
 
 export interface ActionContext<
     TParams extends object = Record<never, never>,
-    TSession extends BaseSession = BaseSession,
+    TSession extends BaseSession = NoneSession,
     THeaders extends object = object,
 > {
     params: TParams

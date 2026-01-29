@@ -20,6 +20,7 @@ message RatingForm {
   Rating rating = 4;
   Comment comment = 5;
   string mainButton = 6;
+  optional bool showInAppReview = 7;
 }
 
 message RatingItem {
@@ -28,11 +29,25 @@ message RatingItem {
       string code = 1;
       string name = 2;
     }
+
     string label = 1;
     string description = 2;
     repeated RatingChipMeta chips = 3;
   }
+
+  message ChipBlock {
+    message RatingChipMeta {
+      string code = 1;
+      string name = 2;
+    }
+    string label = 1;
+    optional string description = 2;
+    repeated RatingChipMeta chips = 3;
+  }
+
   string rate = 1;
   string emoji = 2;
   optional Chip chip = 4;
+  repeated ChipBlock chipBlocks = 5;
+  optional string accessibilityDescription = 6;
 }

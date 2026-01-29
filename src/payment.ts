@@ -1,5 +1,4 @@
 export enum PaymentTarget {
-    AdministrativeFee = 'administrative-fee',
     Debt = 'debt',
     Penalty = 'penalty',
     ReplacementDriverLicense = 'replacement-driver-license',
@@ -10,9 +9,18 @@ export enum PaymentTarget {
     SingleTaxPenalty = 'single-tax-penalty',
     ResidenceRegistration = 'residence-registration',
     MilitaryDonation = 'military-donation',
-    VehicleCustomsClearance = 'vehicle-customs-clearance',
     MilitaryBonds = 'military-bonds',
     CourtPenalties = 'court-penalties',
     VehicleReRegistration = 'vehicle-re-registration',
     Marriage = 'marriage',
+    MilitaryTax = 'military-tax',
+    MilitaryTaxPenalty = 'military-tax-penalty',
+    ReplacementVehicleLicense = 'replacement-vehicle-license',
+    CriminalCert = 'criminal-cert',
+    BusinessDiiaId = 'business-diia-id',
+
+    /** deprecated */
+    Debts = 'debts',
+    /** deprecated */
+    Penalties = 'penalties',
 }

@@ -1,11 +1,9 @@
-import type { ObjectId } from 'bson'
 import { SetRequired } from 'type-fest'
 
 import { ProfileFeature, UserFeatures } from '../generated/profileFeature'
 import { SessionType } from '../generated/session/sessionType'
 import {
     AcquirerTokenData,
-    CabinetUserTokenData,
     EResidentApplicantTokenData,
     EResidentTokenData,
     PartnerTokenData,
@@ -20,6 +18,10 @@ export interface BaseSession {
     sessionType: SessionType
 }
 
+export interface NoneSession {
+    sessionType: SessionType.None
+}
+
 export interface UserSession {
     sessionType: SessionType.User
     user: UserTokenData
@@ -28,11 +30,6 @@ export interface UserSession {
 
 export interface DiiaOfficeUserSession extends UserSession {
     features: SetRequired<UserFeatures, ProfileFeature.office>
-}
-
-export interface CabinetUserSession {
-    sessionType: SessionType.CabinetUser
-    user: CabinetUserTokenData
 }
 
 export interface EResidentSession {
@@ -46,14 +43,14 @@ export interface EResidentApplicantSession {
     user: EResidentApplicantTokenData
 }
 
-export interface AcquirerSession<T extends ObjectId | string = ObjectId> {
+export interface AcquirerSession {
     sessionType: SessionType.Acquirer
-    acquirer: AcquirerTokenData<T>
+    acquirer: AcquirerTokenData
 }
 
-export interface PartnerSession<T extends ObjectId | string = ObjectId> {
+export interface PartnerSession {
     sessionType: SessionType.Partner
-    partner: PartnerTokenData<T>
+    partner: PartnerTokenData
 }
 
 export interface TemporarySession {
@@ -61,9 +58,9 @@ export interface TemporarySession {
     temporary: TemporaryTokenData
 }
 
-export interface ServiceEntranceSession<T extends ObjectId | string = ObjectId> {
+export interface ServiceEntranceSession {
     sessionType: SessionType.ServiceEntrance
-    entrance: ServiceEntranceTokenData<T>
+    entrance: ServiceEntranceTokenData
 }
 
 export interface PortalUserSession {
@@ -77,6 +74,8 @@ export interface ServiceUserSession {
 }
 
 export type ActionSession =
+    | BaseSession
+    | NoneSession
     | UserSession
     | EResidentSession
     | EResidentApplicantSession
@@ -86,4 +85,3 @@ export type ActionSession =
     | ServiceEntranceSession
     | PortalUserSession
     | ServiceUserSession
-    | CabinetUserSession

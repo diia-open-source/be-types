@@ -26,6 +26,9 @@ message AppVersions {
 }
 
 message PublicServiceAppVersionsBySession {
+  reserved 11;
+  reserved "CabinetUser";
+
   optional AppVersions Acquirer = 1;
   optional AppVersions None = 2;
   optional AppVersions Partner = 3;
@@ -36,5 +39,4 @@ message PublicServiceAppVersionsBySession {
   optional AppVersions ServiceEntrance = 8;
   optional AppVersions PortalUser = 9;
   optional AppVersions ServiceUser = 10;
-  optional AppVersions CabinetUser = 11;
 }

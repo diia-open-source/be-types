@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package ua.gov.diia.types;
+
+option java_multiple_files = true;
+option java_package = "ua.gov.diia.types";
+
+message DiiaTemplateButton {
+  string name = 1;
+  string action = 2;
+}
+
+message DiiaTemplateData {
+  string icon = 1;
+  string title = 2;
+  string description = 3;
+  DiiaTemplateButton mainButton = 4;
+  DiiaTemplateButton alternativeButton = 5;
+}
+
+message DiiaTemplate {
+  string type = 1;
+  bool isClosable = 2;
+  DiiaTemplateData data = 3;
+}

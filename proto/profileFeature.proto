@@ -20,6 +20,16 @@ message DiiaOfficeProfileData {
   optional string googleWorkspace = 10;
 }
 
+message DocumentsProfileData {
+  message Proposal {
+    string status = 1; // DocumentsProfileFeatureProposalStatus enum from user-service-client
+  }
+
+  Proposal proposal = 1;
+}
+
+message VeteranProfileData {}
+
 enum DiiaOfficeStatus {
   ACTIVE = 0;
   SUSPENDED = 1;
@@ -31,8 +41,11 @@ enum ProfileFeature {
   reserved 1;
   student = 2;
   documents = 3;
+  veteran = 4;
 }
 
 message UserFeatures {
   optional DiiaOfficeProfileData office = 1;
+  optional DocumentsProfileData documents = 2;
+  optional VeteranProfileData veteran = 3;
 }

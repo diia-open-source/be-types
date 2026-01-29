@@ -3,7 +3,11 @@ syntax = "proto3";
 package ua.gov.diia.types.token;
 
 import "documents/authDocument.proto";
+import "google/protobuf/struct.proto";
+import "platformType.proto";
+import "portal/portalUserPermissions.proto";
 import "token/gender.proto";
+import "token/user.proto";
 
 option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.token";
@@ -21,22 +25,135 @@ message RefreshToken {
 }
 
 message UserTokenDataMsg {
-  string mobileUid = 1;
-  string identifier = 2;
-  AuthEntryPoint authEntryPoint = 3;
-  RefreshToken refreshToken = 4;
-  string fName = 6;
-  string lName = 7;
-  string mName = 8;
-  string itn = 9;
-  Gender gender = 10;
-  string phoneNumber = 11;
-  string email = 12;
-  string passport = 13;
-  ua.gov.diia.types.documents.AuthDocument document = 14;
-  string birthDay = 15;
-  string addressOfRegistration = 16;
-  string addressOfBirth = 17;
-  optional string bankUserId = 18;
-  optional string edrpou = 19;
+  string fName = 1;
+  string lName = 2;
+  string mName = 3;
+  string itn = 4;
+  Gender gender = 5;
+  string phoneNumber = 6;
+  string email = 7;
+  string passport = 8;
+  ua.gov.diia.types.documents.AuthDocument document = 9;
+  string birthDay = 10;
+  string addressOfRegistration = 11;
+  string addressOfBirth = 12;
+  optional string bankUserId = 13;
+  optional string edrpou = 14;
+  optional string nationality = 15; // received from bankId auth
+  optional string recordEDDR = 16; // received from bankId auth
+
+  RefreshToken refreshToken = 17;
+  string mobileUid = 18;
+  string identifier = 19;
+  AuthEntryPoint authEntryPoint = 20;
+}
+
+message VerifiedBaseTokenDataMsg {
+  string fName = 1;
+  string lName = 2;
+  string mName = 3;
+  string itn = 4;
+  Gender gender = 5;
+  string phoneNumber = 6;
+  string email = 7;
+  string passport = 8;
+  ua.gov.diia.types.documents.AuthDocument document = 9;
+  string birthDay = 10;
+  string addressOfRegistration = 11;
+  string addressOfBirth = 12;
+  optional string bankUserId = 13;
+  optional string edrpou = 14;
+  optional string nationality = 15; // received from bankId auth
+  optional string recordEDDR = 16; // received from bankId auth
+  optional RefreshToken refreshToken = 17;
+  string mobileUid = 18;
+  string identifier = 19;
+  AuthEntryPoint authEntryPoint = 20;
+
+  optional int32 exp = 21;
+  optional int32 iat = 22;
+}
+
+message EResidentTokenDataMsg {
+  string fName = 1;
+  string lName = 2;
+  string mName = 3;
+  string itn = 4;
+  Gender gender = 5;
+  string phoneNumber = 6;
+  string email = 7;
+  string passport = 8;
+  ua.gov.diia.types.documents.AuthDocument document = 9;
+  string birthDay = 10;
+  string addressOfRegistration = 11;
+  string addressOfBirth = 12;
+  optional string bankUserId = 13;
+  optional string edrpou = 14;
+  optional string nationality = 15; // received from bankId auth
+  optional string recordEDDR = 16; // received from bankId auth
+
+  RefreshToken refreshToken = 17;
+  string mobileUid = 18;
+  string identifier = 19;
+  AuthEntryPoint authEntryPoint = 20;
+}
+
+message EResidentApplicantTokenDataMsg {
+  string email = 1;
+  optional ua.gov.diia.types.documents.AuthDocument document = 2;
+  RefreshToken refreshToken = 3;
+  string mobileUid = 4;
+  string identifier = 5;
+  AuthEntryPoint authEntryPoint = 6;
+}
+
+message AcquirerTokenDataMsg {
+  RefreshToken refreshToken = 1;
+  string _id = 2; // <T extends ObjectId | string = ObjectId>
+  optional string partnerId = 3;
+}
+
+message PortalUserTokenDataMsg {
+  string fName = 1;
+  string lName = 2;
+  string mName = 3;
+  string itn = 4;
+  string birthDay = 5;
+
+  RefreshToken refreshToken = 6;
+  string identifier = 7;
+  optional ua.gov.diia.types.portal.PortalUserPermissions permissions = 8;
+}
+
+message PartnerTokenDataMsg {
+  RefreshToken refreshToken = 1;
+  string _id = 2; // <T extends ObjectId | string = ObjectId>
+  google.protobuf.Struct scopes = 3;
+}
+
+message TemporaryTokenDataMsg {
+  RefreshToken refreshToken = 1;
+  string mobileUid = 2;
+  optional ua.gov.diia.types.PlatformType platformType = 3;
+  string jti = 4;
+  repeated string scope = 5;
+  optional UserIdentificationData userIdentificationData = 6;
+}
+
+message ServiceEntranceTokenDataMsg {
+  RefreshToken refreshToken = 1;
+  string acquirerId = 2; // <T extends ObjectId | string = ObjectId>
+  string branchHashId = 3;
+  string offerHashId = 4;
+  string offerRequestHashId = 5;
+  string mobileUid = 6;
+}
+
+message ServiceUserTokenDataMsg {
+  string login = 1;
+}
+
+message UserIdentificationData {
+  optional string itn = 1;
+  optional string identifier = 2;
 }

@@ -12,3 +12,5 @@ message PlatformAppVersion {
   string appVersion = 2;
   string platformVersion = 3;
 }
+
+message Empty {}

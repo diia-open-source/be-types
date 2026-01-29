@@ -6,6 +6,9 @@ option java_multiple_files = true;
 option java_package = "ua.gov.diia.types.session";
 
 enum SessionType {
+  reserved 10;
+  reserved "CabinetUser";
+
   Acquirer = 0;
   None = 1;
   Partner = 2;
@@ -16,5 +19,4 @@ enum SessionType {
   ServiceEntrance = 7;
   PortalUser = 8;
   ServiceUser = 9;
-  CabinetUser = 10;
 }

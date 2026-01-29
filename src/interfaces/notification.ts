@@ -1,4 +1,4 @@
-import { MessageActionSubtype } from '../generated/message'
+import { MessageActionSubtype } from '../generated'
 import { PlatformType } from '../generated/platformType'
 
 export enum TemplateStub {

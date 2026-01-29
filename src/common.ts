@@ -1,4 +1,5 @@
 import { ActionVersion } from './actions/actionVersion'
+import { MimeType } from './file'
 import { PlatformType } from './generated/platformType'
 import { ActionSession, SessionType } from './session'
 
@@ -19,6 +20,9 @@ export interface AlsData {
 
 export interface ActHeaders {
     [key: string]: string | undefined
+    /**
+     * @deprecated Use action's name instead if needed
+     */
     actionVersion: ActionVersion
     traceId: string
 
@@ -28,6 +32,10 @@ export interface ActHeaders {
     appVersion?: string
     platformVersion?: string
     serviceCode?: string
+    contentType?: MimeType
+    advertisingId?: string
+    token?: string
+    sentFrom?: string
 }
 
 export interface ActArguments {
@@ -43,4 +51,5 @@ export type LogData = {
     sessionType?: SessionType
     serviceCode?: string
     flags?: string[]
+    documentType?: string
 }

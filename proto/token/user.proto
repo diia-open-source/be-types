@@ -23,4 +23,6 @@ message User {
   string addressOfBirth = 12;
   optional string bankUserId = 13;
   optional string edrpou = 14;
+  optional string nationality = 15; // received from bankId auth
+  optional string recordEDDR = 16; // received from bankId auth
 }

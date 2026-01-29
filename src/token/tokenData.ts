@@ -1,13 +1,10 @@
-import type { ObjectId } from 'bson'
-
 import { AuthDocument } from '../generated/documents/authDocument'
+import { PlatformType } from '../generated/platformType'
 import { PortalUserPermissions } from '../generated/portal/portalUserPermissions'
 import { SessionType } from '../generated/session/sessionType'
 import { PortalUser } from '../generated/token/portalUser'
-import { AuthEntryPoint, RefreshToken } from '../generated/token/tokenData'
+import { AuthEntryPoint, RefreshToken, UserIdentificationData } from '../generated/token/tokenData'
 import { User } from '../generated/token/user'
-
-/* Generic `T = string` in TokenData interfaces is used in services with diia-app >= 15 where convertParamsByRules is dropped to map string into ObjectId */
 
 interface BaseTokenData<T extends SessionType> {
     refreshToken: RefreshToken | null
@@ -43,18 +40,13 @@ export interface EResidentApplicantTokenData extends EResidentApplicant, BaseTok
     authEntryPoint: AuthEntryPoint
 }
 
-export interface CabinetUserTokenData extends User, BaseTokenData<SessionType.CabinetUser> {
-    mobileUid: string
-    identifier: string
-}
+export type AppUser = UserTokenData | EResidentTokenData
 
-export type AppUser = UserTokenData | EResidentTokenData | CabinetUserTokenData
+export type AppUserSessionType = SessionType.User | SessionType.EResident
 
-export type AppUserSessionType = SessionType.User | SessionType.EResident | SessionType.CabinetUser
-
-export interface AcquirerTokenData<T extends ObjectId | string = ObjectId> extends BaseTokenData<SessionType.Acquirer> {
-    _id: T
-    partnerId?: T
+export interface AcquirerTokenData extends BaseTokenData<SessionType.Acquirer> {
+    _id: string
+    partnerId?: string
 }
 
 export interface PortalUserTokenData extends PortalUser, BaseTokenData<SessionType.PortalUser> {
@@ -62,17 +54,21 @@ export interface PortalUserTokenData extends PortalUser, BaseTokenData<SessionTy
     permissions?: PortalUserPermissions
 }
 
-export interface PartnerTokenData<T extends ObjectId | string = ObjectId> extends BaseTokenData<SessionType.Partner> {
-    _id: T
+export interface PartnerTokenData extends BaseTokenData<SessionType.Partner> {
+    _id: string
     scopes: Record<string, string[]>
 }
 
 export interface TemporaryTokenData extends BaseTokenData<SessionType.Temporary> {
     mobileUid: string
+    platformType?: PlatformType
+    jti: string
+    scope: string[]
+    identificationData?: UserIdentificationData
 }
 
-export interface ServiceEntranceTokenData<T extends ObjectId | string = ObjectId> extends BaseTokenData<SessionType.ServiceEntrance> {
-    acquirerId: T
+export interface ServiceEntranceTokenData extends BaseTokenData<SessionType.ServiceEntrance> {
+    acquirerId: string
     branchHashId: string
     offerHashId: string
     offerRequestHashId: string
@@ -88,7 +84,6 @@ export type TokenData =
     | AcquirerTokenData
     | EResidentTokenData
     | EResidentApplicantTokenData
-    | CabinetUserTokenData
     | PartnerTokenData
     | TemporaryTokenData
     | ServiceEntranceTokenData

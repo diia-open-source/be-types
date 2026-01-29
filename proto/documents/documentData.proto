@@ -11,3 +11,17 @@ enum OwnerType {
   owner = 0;
   properUser = 1;
 }
+
+message DocumentBaseData {
+  string id = 1;
+  string number = 2;
+  int32 status = 3;
+  string name = 4;
+  string documentType = 5;
+  string documentTypeCamelCase = 6;
+  OwnerType ownerType = 7;
+  optional string listName = 8;
+  optional string subtype = 9;
+  optional string issuedAt = 10; // iso
+  optional string expiresAt = 11; // iso
+}
