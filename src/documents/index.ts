@@ -10,11 +10,11 @@ export * from './ticker'
 
 export * from './localization'
 
-export * from '../generated/documents/nameValue'
+export { NameValue, NameValueWithCode } from '../generated/documents/nameValue'
 
-export * from '../generated/documents/authDocument'
+export { AuthDocument } from '../generated/documents/authDocument'
 
-export * from '../generated/documents/documentData'
+export { OwnerType, ownerTypeFromJSON, ownerTypeToJSON, ownerTypeToNumber, DocumentBaseData } from '../generated/documents/documentData'
 
 export enum CustomStatusCode {
     WaitingCovidCertificate = 2019,

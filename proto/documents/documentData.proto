@@ -24,4 +24,5 @@ message DocumentBaseData {
   optional string subtype = 9;
   optional string issuedAt = 10; // iso
   optional string expiresAt = 11; // iso
+  optional string listDescription = 12;
 }

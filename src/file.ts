@@ -1,6 +1,15 @@
 import { ContentDisposition, FileType } from './generated/file/fileType'
 
-export * from './generated/file/fileType'
+export {
+    FileType,
+    fileTypeFromJSON,
+    fileTypeToJSON,
+    fileTypeToNumber,
+    ContentDisposition,
+    contentDispositionFromJSON,
+    contentDispositionToJSON,
+    contentDispositionToNumber,
+} from './generated/file/fileType'
 
 export enum MimeType {
     Zip = 'application/zip',
@@ -14,6 +23,7 @@ export enum MimeType {
     HEIF = 'image/heif',
     HEIC = 'image/heic',
     MP4 = 'video/mp4',
+    SVG = 'image/svg+xml',
     MultipartMixed = 'multipart/mixed',
     MultipartFormData = 'multipart/form-data',
 }

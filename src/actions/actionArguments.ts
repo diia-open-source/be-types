@@ -33,50 +33,66 @@ export declare type DiiaOfficeUserActionArguments = UserActionArguments<UserActi
 
 export declare type UserActionHeaders = AppUserActionHeaders
 
-export interface UserActionArguments<T extends UserActionHeaders = UserActionHeaders, S extends UserSession = UserSession>
-    extends BaseActionArguments<T, S> {}
+export interface UserActionArguments<
+    T extends UserActionHeaders = UserActionHeaders,
+    S extends UserSession = UserSession,
+> extends BaseActionArguments<T, S> {}
 
 export declare type EResidentApplicantActionHeaders = AppUserActionHeaders
 
-export interface EResidentApplicantActionArguments<T extends EResidentApplicantActionHeaders = EResidentApplicantActionHeaders>
-    extends BaseActionArguments<T, EResidentApplicantSession> {}
+export interface EResidentApplicantActionArguments<
+    T extends EResidentApplicantActionHeaders = EResidentApplicantActionHeaders,
+> extends BaseActionArguments<T, EResidentApplicantSession> {}
 
 export declare type EResidentActionHeaders = AppUserActionHeaders
 
-export interface EResidentActionArguments<T extends EResidentActionHeaders = EResidentActionHeaders>
-    extends BaseActionArguments<T, EResidentSession> {}
+export interface EResidentActionArguments<T extends EResidentActionHeaders = EResidentActionHeaders> extends BaseActionArguments<
+    T,
+    EResidentSession
+> {}
 
 export declare type AppUserActionArguments = UserActionArguments | EResidentActionArguments
 
 export declare type AcquirerActionHeaders = ActHeaders
 
-export interface AcquirerActionArguments<T extends AcquirerActionHeaders = AcquirerActionHeaders>
-    extends BaseActionArguments<T, AcquirerSession> {}
+export interface AcquirerActionArguments<T extends AcquirerActionHeaders = AcquirerActionHeaders> extends BaseActionArguments<
+    T,
+    AcquirerSession
+> {}
 
 export declare type PartnerActionHeaders = ActHeaders
 
-export interface PartnerActionArguments<T extends PartnerActionHeaders = PartnerActionHeaders>
-    extends BaseActionArguments<T, PartnerSession> {}
+export interface PartnerActionArguments<T extends PartnerActionHeaders = PartnerActionHeaders> extends BaseActionArguments<
+    T,
+    PartnerSession
+> {}
 
 export declare type TemporaryActionHeaders = AppUserActionHeaders
 
-export interface TemporaryActionArguments<T extends TemporaryActionHeaders = TemporaryActionHeaders>
-    extends BaseActionArguments<T, TemporarySession> {}
+export interface TemporaryActionArguments<T extends TemporaryActionHeaders = TemporaryActionHeaders> extends BaseActionArguments<
+    T,
+    TemporarySession
+> {}
 
 export declare type ServiceEntranceActionHeaders = AppUserActionHeaders
 
-export interface ServiceEntranceActionArguments<T extends ServiceEntranceActionHeaders = ServiceEntranceActionHeaders>
-    extends BaseActionArguments<T, ServiceEntranceSession> {}
+export interface ServiceEntranceActionArguments<
+    T extends ServiceEntranceActionHeaders = ServiceEntranceActionHeaders,
+> extends BaseActionArguments<T, ServiceEntranceSession> {}
 
 export declare type PortalActionHeaders = AppUserActionHeaders
 
-export interface PortalUserActionArguments<T extends PortalActionHeaders = PortalActionHeaders>
-    extends BaseActionArguments<T, PortalUserSession> {}
+export interface PortalUserActionArguments<T extends PortalActionHeaders = PortalActionHeaders> extends BaseActionArguments<
+    T,
+    PortalUserSession
+> {}
 
 export declare type ServiceUserActionHeaders = ActHeaders
 
-export interface ServiceUserActionArguments<T extends ServiceUserActionHeaders = ServiceUserActionHeaders>
-    extends BaseActionArguments<T, ServiceUserSession> {}
+export interface ServiceUserActionArguments<T extends ServiceUserActionHeaders = ServiceUserActionHeaders> extends BaseActionArguments<
+    T,
+    ServiceUserSession
+> {}
 
 export declare type ServiceActionArguments<T extends ActHeaders = ActHeaders> = BaseActionArguments<T>
 

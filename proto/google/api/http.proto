@@ -47,8 +47,7 @@ message Http {
 // more HTTP REST endpoints. It allows developers to build a single API service
 // that supports both gRPC APIs and REST APIs. Many systems, including [Google
 // APIs](https://github.com/googleapis/googleapis),
-// [Cloud Endpoints](https://cloud.google.com/endpoints), [gRPC
-// Gateway](https://github.com/grpc-ecosystem/grpc-gateway),
+// [Cloud Endpoints](https://cloud.google.com/endpoints), [gRPC Gateway](https://github.com/grpc-ecosystem/grpc-gateway),
 // and [Envoy](https://github.com/envoyproxy/envoy) proxy support this feature
 // and use it for large scale production services.
 //

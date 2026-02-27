@@ -1,9 +1,23 @@
 export * from './tokenData'
 
-export * from '../generated/token/portalUser'
+export { PortalUser } from '../generated/token/portalUser'
 
-export * from '../generated/token/user'
+export { User } from '../generated/token/user'
 
-export * from '../generated/token/gender'
+export { Gender, genderFromJSON, genderToJSON, genderToNumber } from '../generated/token/gender'
 
-export * from '../generated/token/tokenData'
+export {
+    AuthEntryPoint,
+    RefreshToken,
+    UserTokenDataMsg,
+    VerifiedBaseTokenDataMsg,
+    EResidentTokenDataMsg,
+    EResidentApplicantTokenDataMsg,
+    AcquirerTokenDataMsg,
+    PortalUserTokenDataMsg,
+    PartnerTokenDataMsg,
+    TemporaryTokenDataMsg,
+    ServiceEntranceTokenDataMsg,
+    ServiceUserTokenDataMsg,
+    UserIdentificationData,
+} from '../generated/token/tokenData'
