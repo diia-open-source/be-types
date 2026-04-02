@@ -23,7 +23,7 @@ export interface ActHeaders {
     /**
      * @deprecated Use action's name instead if needed
      */
-    actionVersion: ActionVersion
+    actionVersion?: ActionVersion
     traceId: string
 
     acceptLanguage?: string
