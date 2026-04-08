@@ -13,6 +13,7 @@ export enum PaymentTarget {
     CourtPenalties = 'court-penalties',
     VehicleReRegistration = 'vehicle-re-registration',
     Marriage = 'marriage',
+    Divorce = 'divorce',
     MilitaryTax = 'military-tax',
     MilitaryTaxPenalty = 'military-tax-penalty',
     ReplacementVehicleLicense = 'replacement-vehicle-license',
