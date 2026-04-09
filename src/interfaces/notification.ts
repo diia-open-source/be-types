@@ -1,4 +1,3 @@
-import { MessageActionSubtype } from '../generated'
 import { PlatformType } from '../generated/platformType'
 
 export enum TemplateStub {
@@ -55,7 +54,7 @@ export interface NotificationAppVersions {
 
 export interface MessageAction {
     type: string
-    subtype?: MessageActionSubtype
+    subtype?: string
     resourceId?: string
 }
 

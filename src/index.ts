@@ -1,3 +1,5 @@
+export * from './address'
+
 export * from './documents'
 
 export * from './token'
