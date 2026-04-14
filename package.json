@@ -1,6 +1,6 @@
 {
     "name": "@diia-inhouse/types",
-    "version": "12.0.0",
+    "version": "12.0.1",
     "description": "Core types",
     "main": "dist/index.js",
     "types": "dist/types/index.d.ts",
@@ -32,8 +32,8 @@
     "devDependencies": {
         "@bufbuild/buf": "1.66.1",
         "@diia-inhouse/configs": "6.1.1",
-        "@diia-inhouse/eslint-config": "8.4.0",
-        "@diia-inhouse/genproto": "3.2.1",
+        "@diia-inhouse/eslint-config": "8.8.0",
+        "@diia-inhouse/genproto": "3.2.10",
         "eslint": "9.39.4",
         "lockfile-lint": "4.14.1",
         "rimraf": "6.1.3",
