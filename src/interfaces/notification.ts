@@ -1,4 +1,4 @@
-import { PlatformType } from '../generated/platformType'
+import { PlatformType } from '../generated/platformType.js'
 
 export enum TemplateStub {
     ViolationDate = 'VIOLATION_DATE',

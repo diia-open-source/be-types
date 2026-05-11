@@ -1,5 +1,5 @@
-import { DocumentBaseData, OwnerType } from '../generated/documents/documentData'
-import { DocStatus } from './docStatus'
+import { DocumentBaseData, OwnerType } from '../generated/documents/documentData.js'
+import { DocStatus } from './docStatus.js'
 
 export interface BaseDocument {
     baseData: DocumentBaseData

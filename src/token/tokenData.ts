@@ -1,10 +1,10 @@
-import { AuthDocument } from '../generated/documents/authDocument'
-import { PlatformType } from '../generated/platformType'
-import { PortalUserPermissions } from '../generated/portal/portalUserPermissions'
-import { SessionType } from '../generated/session/sessionType'
-import { PortalUser } from '../generated/token/portalUser'
-import { AuthEntryPoint, RefreshToken, UserIdentificationData } from '../generated/token/tokenData'
-import { User } from '../generated/token/user'
+import { AuthDocument } from '../generated/documents/authDocument.js'
+import { PlatformType } from '../generated/platformType.js'
+import { PortalUserPermissions } from '../generated/portal/portalUserPermissions.js'
+import { SessionType } from '../generated/session/sessionType.js'
+import { PortalUser } from '../generated/token/portalUser.js'
+import { AuthEntryPoint, RefreshToken, UserIdentificationData } from '../generated/token/tokenData.js'
+import { User } from '../generated/token/user.js'
 
 interface BaseTokenData<T extends SessionType> {
     refreshToken: RefreshToken | null

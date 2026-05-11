@@ -1,4 +1,4 @@
-import { ContentDisposition, FileType } from './generated/file/fileType'
+import { ContentDisposition, FileType } from './generated/file/fileType.js'
 
 export {
     FileType,
@@ -9,7 +9,7 @@ export {
     contentDispositionFromJSON,
     contentDispositionToJSON,
     contentDispositionToNumber,
-} from './generated/file/fileType'
+} from './generated/file/fileType.js'
 
 export enum MimeType {
     Zip = 'application/zip',

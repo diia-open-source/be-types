@@ -1,7 +1,7 @@
 import { SetRequired } from 'type-fest'
 
-import { ProfileFeature, UserFeatures } from '../generated/profileFeature'
-import { SessionType } from '../generated/session/sessionType'
+import { ProfileFeature, UserFeatures } from '../generated/profileFeature.js'
+import { SessionType } from '../generated/session/sessionType.js'
 import {
     AcquirerTokenData,
     EResidentApplicantTokenData,
@@ -12,7 +12,7 @@ import {
     ServiceUserTokenData,
     TemporaryTokenData,
     UserTokenData,
-} from '../token'
+} from '../token/index.js'
 
 export interface BaseSession {
     sessionType: SessionType

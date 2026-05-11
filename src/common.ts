@@ -1,7 +1,7 @@
-import { ActionVersion } from './actions/actionVersion'
-import { MimeType } from './file'
-import { PlatformType } from './generated/platformType'
-import { ActionSession, SessionType } from './session'
+import { ActionVersion } from './actions/actionVersion.js'
+import { MimeType } from './file.js'
+import { PlatformType } from './generated/platformType.js'
+import { ActionSession, SessionType } from './session/index.js'
 
 export enum IdentifierPrefix {
     EResident = 'e-resident',

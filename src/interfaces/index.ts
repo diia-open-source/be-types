@@ -1,9 +1,9 @@
-export * from './onInit'
+export * from './onInit.js'
 
-export * from './onHealthCheck'
+export * from './onHealthCheck.js'
 
-export * from './onDestroy'
+export * from './onDestroy.js'
 
-export * from './onRegistrationsFinished'
+export * from './onRegistrationsFinished.js'
 
-export * from './notification'
+export * from './notification.js'

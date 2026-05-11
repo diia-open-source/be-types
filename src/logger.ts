@@ -1,6 +1,6 @@
 import { AsyncLocalStorage } from 'node:async_hooks'
 
-import { AlsData, LogData } from './common'
+import { AlsData, LogData } from './common.js'
 
 export enum LogLevel {
     LOG = 'log',

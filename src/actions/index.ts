@@ -1,5 +1,5 @@
-export * from './actionArguments'
+export * from './actionArguments.js'
 
-export * from './actionVersion'
+export * from './actionVersion.js'
 
-export * from './actionContext'
+export * from './actionContext.js'

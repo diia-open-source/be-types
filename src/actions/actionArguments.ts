@@ -1,5 +1,5 @@
-import { ActHeaders, GenericObject } from '../common'
-import { PlatformType } from '../generated/platformType'
+import { ActHeaders, GenericObject } from '../common.js'
+import { PlatformType } from '../generated/platformType.js'
 import {
     AcquirerSession,
     BaseSession,
@@ -12,7 +12,7 @@ import {
     ServiceUserSession,
     TemporarySession,
     UserSession,
-} from '../session'
+} from '../session/index.js'
 
 export type ActionParams = GenericObject
 

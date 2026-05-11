@@ -1,4 +1,4 @@
-import { BaseSession, NoneSession } from '../session'
+import { BaseSession, NoneSession } from '../session/index.js'
 
 export interface ActionContext<
     TParams extends object = Record<never, never>,

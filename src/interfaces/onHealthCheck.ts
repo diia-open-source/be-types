@@ -1,4 +1,4 @@
-import { HttpStatusCode } from '../http'
+import { HttpStatusCode } from '../http.js'
 
 export type HealthCheckResult<T> = {
     status: HttpStatusCode

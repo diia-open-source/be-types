@@ -1,4 +1,4 @@
-import { AppVersions } from './generated/version'
+import { AppVersions } from './generated/version.js'
 
 export interface WithAppVersions {
     appVersions?: AppVersions
