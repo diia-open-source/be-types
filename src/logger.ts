@@ -20,6 +20,7 @@ export interface LoggerOptions {
     endLengthToLog?: number
     maxObjectDepth?: number
     maxObjectBreadth?: number
+    redactDisabled?: boolean
     redact?: {
         fields?: string[]
         paths?: string[]
