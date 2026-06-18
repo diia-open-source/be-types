@@ -19,6 +19,7 @@ export enum PaymentTarget {
     ReplacementVehicleLicense = 'replacement-vehicle-license',
     CriminalCert = 'criminal-cert',
     BusinessDiiaId = 'business-diia-id',
+    ProfessionalDevelopmentGrants = 'professional-development-grants',
 
     /** deprecated */
     Debts = 'debts',
