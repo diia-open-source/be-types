@@ -32,8 +32,6 @@ export * from './codeName.js'
 
 export * from './pdf.js'
 
-export * from './payment.js'
-
 export * from './generated/index.js'
 
 export * from './validators.js'
