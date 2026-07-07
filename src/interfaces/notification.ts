@@ -56,6 +56,7 @@ export interface MessageAction {
     type: string
     subtype?: string
     resourceId?: string
+    subresource?: string
 }
 
 export type NotificationAppVersionsByPlatformType = Partial<Record<PlatformType, NotificationAppVersions>>
