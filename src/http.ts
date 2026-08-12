@@ -363,7 +363,7 @@ export enum HttpStatusCode {
     /**
      * Official Documentation @ https://tools.ietf.org/html/rfc2518#section-10.6
      *
-     * The server has an internal configuration error: the chosen variant resource is configured to engage in transparent content negotiation itself, and is therefore not a proper end point in the negotiation process.
+     * The method could not be performed on the resource because the server is unable to store the representation needed to complete the request. This condition is considered temporary. If the request that received this status code was the result of a user action, it must not be repeated until a separate user action requests it.
      */
     INSUFFICIENT_STORAGE = 507,
     /**
