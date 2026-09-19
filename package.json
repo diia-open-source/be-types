@@ -1,6 +1,6 @@
 {
     "name": "@diia-inhouse/types",
-    "version": "14.2.12",
+    "version": "14.2.13",
     "type": "module",
     "description": "Core types",
     "main": "dist/index.js",
@@ -40,8 +40,8 @@
     "devDependencies": {
         "@bufbuild/buf": "1.69.0",
         "@diia-inhouse/configs": "7.2.1",
-        "@diia-inhouse/genproto": "4.0.13",
-        "@diia-inhouse/oxc-config": "3.0.0",
+        "@diia-inhouse/genproto": "4.0.15",
+        "@diia-inhouse/oxc-config": "3.0.1",
         "lockfile-lint": "5.0.0",
         "oxfmt": "0.47.0",
         "oxlint": "1.62.0",
