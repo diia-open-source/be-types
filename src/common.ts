@@ -36,6 +36,8 @@ export interface ActHeaders {
     advertisingId?: string
     token?: string
     sentFrom?: string
+    ticket?: string
+    channelUuid?: string
 }
 
 export interface ActArguments {

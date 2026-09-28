@@ -41,6 +41,8 @@ export const grpcMetadataKeys = {
     SENT_FROM: 'sent-from',
     HANDLED_BY: 'handled-by',
     TOKEN: 'token',
+    TICKET: 'ticket',
+    CHANNEL_UUID: 'channeluuid',
 } as const
 
 export type GrpcMetadataKey = (typeof grpcMetadataKeys)[keyof typeof grpcMetadataKeys]
