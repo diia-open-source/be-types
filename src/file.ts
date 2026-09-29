@@ -26,6 +26,8 @@ export enum MimeType {
     SVG = 'image/svg+xml',
     MultipartMixed = 'multipart/mixed',
     MultipartFormData = 'multipart/form-data',
+    P7M = 'application/pkcs7-mime',
+    P7S = 'application/pkcs7-signature',
 }
 
 export interface ActionResultFile {
