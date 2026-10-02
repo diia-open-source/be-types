@@ -8,6 +8,7 @@ option java_package = "ua.gov.diia.types";
 message DiiaTemplateButton {
   string name = 1;
   string action = 2;
+  optional string resource = 3;
 }
 
 message DiiaTemplateData {
