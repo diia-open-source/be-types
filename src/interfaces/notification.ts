@@ -68,6 +68,7 @@ export interface CreateNotificationWithPushesParams<T = MessageTemplateCode> {
     resourceId?: string
     appVersions?: NotificationAppVersionsByPlatformType
     action?: MessageAction
+    mobileUid?: string
 }
 
 export type NotificationTemplateParams = Pick<CreateNotificationWithPushesParams, 'templateParams' | 'action' | 'appVersions'>
