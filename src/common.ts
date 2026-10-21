@@ -18,6 +18,12 @@ export interface AlsData {
     session?: ActionSession
 }
 
+export const ConnectionModes = {
+    DirectToCell: 'direct-to-cell',
+} as const
+
+export type ConnectionMode = (typeof ConnectionModes)[keyof typeof ConnectionModes]
+
 export interface ActHeaders {
     [key: string]: string | undefined
     /**
@@ -38,6 +44,7 @@ export interface ActHeaders {
     sentFrom?: string
     ticket?: string
     channelUuid?: string
+    connectionMode?: ConnectionMode
 }
 
 export interface ActArguments {
