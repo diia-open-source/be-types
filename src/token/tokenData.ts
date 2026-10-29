@@ -1,8 +1,6 @@
 import { AuthDocument } from '../generated/documents/authDocument.js'
 import { PlatformType } from '../generated/platformType.js'
-import { PortalUserPermissions } from '../generated/portal/portalUserPermissions.js'
 import { SessionType } from '../generated/session/sessionType.js'
-import { PortalUser } from '../generated/token/portalUser.js'
 import { AuthEntryPoint, RefreshToken, UserIdentificationData } from '../generated/token/tokenData.js'
 import { User } from '../generated/token/user.js'
 
@@ -49,11 +47,6 @@ export interface AcquirerTokenData extends BaseTokenData<SessionType.Acquirer> {
     partnerId?: string
 }
 
-export interface PortalUserTokenData extends PortalUser, BaseTokenData<SessionType.PortalUser> {
-    identifier: string
-    permissions?: PortalUserPermissions
-}
-
 export interface PartnerTokenData extends BaseTokenData<SessionType.Partner> {
     _id: string
     scopes: Record<string, string[]>
@@ -87,5 +80,4 @@ export type TokenData =
     | PartnerTokenData
     | TemporaryTokenData
     | ServiceEntranceTokenData
-    | PortalUserTokenData
     | ServiceUserTokenData

@@ -7,7 +7,6 @@ import {
     EResidentApplicantTokenData,
     EResidentTokenData,
     PartnerTokenData,
-    PortalUserTokenData,
     ServiceEntranceTokenData,
     ServiceUserTokenData,
     TemporaryTokenData,
@@ -63,11 +62,6 @@ export interface ServiceEntranceSession {
     entrance: ServiceEntranceTokenData
 }
 
-export interface PortalUserSession {
-    sessionType: SessionType.PortalUser
-    user: PortalUserTokenData
-}
-
 export interface ServiceUserSession {
     sessionType: SessionType.ServiceUser
     serviceUser: ServiceUserTokenData
@@ -83,5 +77,4 @@ export type ActionSession =
     | PartnerSession
     | TemporarySession
     | ServiceEntranceSession
-    | PortalUserSession
     | ServiceUserSession

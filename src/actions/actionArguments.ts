@@ -7,7 +7,6 @@ import {
     EResidentApplicantSession,
     EResidentSession,
     PartnerSession,
-    PortalUserSession,
     ServiceEntranceSession,
     ServiceUserSession,
     TemporarySession,
@@ -80,13 +79,6 @@ export interface ServiceEntranceActionArguments<
     T extends ServiceEntranceActionHeaders = ServiceEntranceActionHeaders,
 > extends BaseActionArguments<T, ServiceEntranceSession> {}
 
-export declare type PortalActionHeaders = AppUserActionHeaders
-
-export interface PortalUserActionArguments<T extends PortalActionHeaders = PortalActionHeaders> extends BaseActionArguments<
-    T,
-    PortalUserSession
-> {}
-
 export declare type ServiceUserActionHeaders = ActHeaders
 
 export interface ServiceUserActionArguments<T extends ServiceUserActionHeaders = ServiceUserActionHeaders> extends BaseActionArguments<
@@ -109,5 +101,4 @@ export type ActionArguments =
     | PartnerActionArguments
     | TemporaryActionArguments
     | ServiceEntranceActionArguments
-    | PortalUserActionArguments
     | ServiceUserActionArguments
