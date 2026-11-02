@@ -32,8 +32,6 @@ export * from './codeName.js'
 
 export * from './language.js'
 
-export * from './userGroup.js'
-
 export * from './pdf.js'
 
 export * from './generated/index.js'
