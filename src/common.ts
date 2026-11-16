@@ -12,6 +12,8 @@ export enum IdentifierPrefix {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type GenericObject = Record<string, any>
 
+export type NumBoolean = 0 | 1
+
 export interface AlsData {
     logData?: LogData
     headers?: ActHeaders
