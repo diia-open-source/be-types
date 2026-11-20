@@ -1,6 +1,6 @@
 {
     "name": "@diia-inhouse/types",
-    "version": "14.13.1",
+    "version": "14.13.2",
     "description": "Core types",
     "license": "SEE LICENCE IN LICENCE.md",
     "author": "diia-team",
@@ -19,8 +19,7 @@
         "./package.json": "./package.json"
     },
     "scripts": {
-        "prebuild": "rimraf dist",
-        "build": "npm run genproto && npx tsc && cp -r proto dist/proto",
+        "build": "diia-clean dist && npm run genproto && npx tsc && cp -r proto dist/proto",
         "semantic-release": "semantic-release",
         "lint": "oxlint && oxfmt --check . && diia-buf-lint",
         "lint-fix": "oxlint --fix && oxfmt . && diia-buf-lint --fix",
@@ -42,7 +41,6 @@
         "oxfmt": "0.72.0",
         "oxlint": "1.87.0",
         "oxlint-tsgolint": "7.0.2003",
-        "rimraf": "6.1.3",
         "semantic-release": "24.2.3",
         "ts-proto": "2.11.8",
         "typescript": "5.9.3"
