@@ -1,6 +1,6 @@
 {
     "name": "@diia-inhouse/types",
-    "version": "14.13.2",
+    "version": "14.13.3",
     "description": "Core types",
     "license": "SEE LICENCE IN LICENCE.md",
     "author": "diia-team",
@@ -36,7 +36,7 @@
     "devDependencies": {
         "@bufbuild/buf": "1.69.0",
         "@diia-inhouse/configs": "7.4.0",
-        "@diia-inhouse/oxc-config": "6.2.0",
+        "@diia-inhouse/oxc-config": "6.2.1",
         "lockfile-lint": "5.0.0",
         "oxfmt": "0.72.0",
         "oxlint": "1.87.0",
